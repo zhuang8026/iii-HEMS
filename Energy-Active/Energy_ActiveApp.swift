@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Energy_ActiveApp: App {
-        
+    
     // MARK: 警告視窗 & 每週提示視窗 & 每日登入提示視窗
     @StateObject var electricityElectricityTrackingAlertManager = ElectricityTrackingAlertManager()
     
@@ -24,6 +24,9 @@ struct Energy_ActiveApp: App {
     @StateObject var electricityCustomDeleteAlertManager = CustomDeleteAlertManager()
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
+    @StateObject private var appStore = AppStore()  // 全域狀態管理
+    @StateObject private var mqttManager = MQTTManager.shared
+    
     
     var body: some Scene {
         WindowGroup {
@@ -37,6 +40,10 @@ struct Energy_ActiveApp: App {
                 .environmentObject(electricityCreateReviseScheduleManager)
                 .environmentObject(electricityCustomDeleteAlertManager)
                 .environmentObject(electricityCustomAlertManager)
+
+                .environmentObject(appStore)  // ✅ 注入 appStore 傳遞全域狀態
+                .environmentObject(mqttManager) // ✅ 注入 MQTTManager 讓所有頁面都能使用
+            
                 .environment(\.sizeCategory, .medium)
                 .onAppear {
                     // 在 App 啟動時確認通知設定狀態
@@ -67,7 +74,7 @@ struct Energy_ActiveApp: App {
                     
                     
                     //MARK: 設置徽章為 0，避免開啟 App 時還顯示未清除的徽章
-//                      UIApplication.shared.applicationIconBadgeNumber = 0
+                    //                      UIApplication.shared.applicationIconBadgeNumber = 0
                 }
         }
     }

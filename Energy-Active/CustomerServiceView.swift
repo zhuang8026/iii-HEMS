@@ -27,7 +27,7 @@ struct CustomerServiceView: View {
                         }.frame(height: 50.0)
                         
                         NavigationLink {
-//                            UserAccountChangeView(loginflag: $loginflag)
+                            //                            UserAccountChangeView(loginflag: $loginflag)
                             UserPasswordChangeView(loginflag: $loginflag)
                         } label: {
                             Text("密碼變更")
@@ -74,18 +74,18 @@ struct CustomerServiceView: View {
                         }
                         
                         
-//                        // MARK: 測試異常用, 正式時請註解
-//                        Button {
-//                            print("測試異常")
-//                            POST_URLRequest_test_abnormal_consumption()
-//                            
-//                        } label: {
-//                            Text("測試異常")
-//                                .font(.custom("NotoSansTC-Medium", size: 20))
-//                                .foregroundColor(Color.white)
-//                                .frame( width: UIScreen.main.bounds.width, height: 60, alignment: .center)
-//                                .background(Color(red: 61.0 / 255.0, green: 102.0 / 255.0, blue: 143.0 / 255.0))
-//                        }
+                        //                        // MARK: 測試異常用, 正式時請註解
+                        //                        Button {
+                        //                            print("測試異常")
+                        //                            POST_URLRequest_test_abnormal_consumption()
+                        //
+                        //                        } label: {
+                        //                            Text("測試異常")
+                        //                                .font(.custom("NotoSansTC-Medium", size: 20))
+                        //                                .foregroundColor(Color.white)
+                        //                                .frame( width: UIScreen.main.bounds.width, height: 60, alignment: .center)
+                        //                                .background(Color(red: 61.0 / 255.0, green: 102.0 / 255.0, blue: 143.0 / 255.0))
+                        //                        }
                         
                         
                         Spacer()
@@ -111,7 +111,7 @@ struct CustomerServiceView: View {
         }
     }
     
-        
+    
     private func startLoadingTimer() {
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             self.isLoaded = true
@@ -120,44 +120,44 @@ struct CustomerServiceView: View {
         }
     }
     
-//    func POST_URLRequest_test_abnormal_consumption(){
-//        
-//        let session = URLSession(configuration: .default)
-//        // 設定URL
-//        let url = "http://15.165.147.172:8885/abnormal_consumption"
-//        var request = URLRequest(url: URL(string: url)!)
-//        
-//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-//        request.httpMethod = "POST"
-//        
-//        let user_id = "billdavid50814@gmail.com"
-//        let report_time = "2024-11-01 10:00:00"
-//        let anom_class = "1"
-//        
-//        let postData = ["user_id":user_id,"report_time":report_time,"anom_class":anom_class]
-//        do {
-//            let jsonData = try JSONSerialization.data(withJSONObject: postData, options: [])
-//            request.httpBody = jsonData
-//        } catch {
-//            
-//        }
-//        
-//        // 接收回傳的task
-//        let task = session.dataTask(with: request) {(data, response, error) in
-//            do {
-//                print("連線到伺服器 (POST abnormal_consumption)")
-//                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
-//                //print(response)
-//                //print(json)
-//               
-//                print("POST abnormal_consumption Pass")
-//            } catch {
-//                print(error)
-//                return
-//            }
-//        }
-//        task.resume()
-//    }
+    //    func POST_URLRequest_test_abnormal_consumption(){
+    //
+    //        let session = URLSession(configuration: .default)
+    //        // 設定URL
+    //        let url = "http://15.165.147.172:8885/abnormal_consumption"
+    //        var request = URLRequest(url: URL(string: url)!)
+    //
+    //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    //        request.httpMethod = "POST"
+    //
+    //        let user_id = "billdavid50814@gmail.com"
+    //        let report_time = "2024-11-01 10:00:00"
+    //        let anom_class = "1"
+    //
+    //        let postData = ["user_id":user_id,"report_time":report_time,"anom_class":anom_class]
+    //        do {
+    //            let jsonData = try JSONSerialization.data(withJSONObject: postData, options: [])
+    //            request.httpBody = jsonData
+    //        } catch {
+    //
+    //        }
+    //
+    //        // 接收回傳的task
+    //        let task = session.dataTask(with: request) {(data, response, error) in
+    //            do {
+    //                print("連線到伺服器 (POST abnormal_consumption)")
+    //                let json = try JSONSerialization.jsonObject(with: data!, options: []) as? [String : Any]
+    //                //print(response)
+    //                //print(json)
+    //
+    //                print("POST abnormal_consumption Pass")
+    //            } catch {
+    //                print(error)
+    //                return
+    //            }
+    //        }
+    //        task.resume()
+    //    }
 }
 
 //struct CustomerServiceView_Previews: PreviewProvider {
@@ -170,14 +170,14 @@ struct UserAccountChangeView: View {
     
     @Binding var loginflag: Bool
     let user_id  = CurrentUserID
-//    let Ntpc3Url : String = "https://ntpc3.lowcarbon-hems.org.tw/"
+    //    let Ntpc3Url : String = "https://ntpc3.lowcarbon-hems.org.tw/"
     @State private var textFields: [TextFieldModel] = [TextFieldModel()]
     @State var userName:String = ""
     
     var body: some View {
         
         ZStack{
-//            Color.init(hex: "#e9ecd9", alpha: 1.0)
+            //            Color.init(hex: "#e9ecd9", alpha: 1.0)
             
             Color(red: 238.0 / 255.0, green: 241.0 / 255.0, blue: 251.0 / 255.0).ignoresSafeArea(.all, edges: .top)
             VStack{
@@ -273,10 +273,10 @@ struct UserAccountChangeView: View {
                             .background(GreenCustomizeColor)
                             .cornerRadius(40.0)
                             .shadow(color: Color(white: 0.0, opacity: 0.16), radius: 3.0, x: 0.0, y: 3.0)
-                            
+                        
                     }
                 }.padding(.horizontal, 13).padding(.bottom, 15)
-                                
+                
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
             .aspectRatio(351/428, contentMode: .fit)
@@ -285,7 +285,7 @@ struct UserAccountChangeView: View {
             .padding(.horizontal, 12)
             .navigationBarTitle("")
         }.onTapGesture {
-//            UIApplication.shared.keyWindow?.endEditing(true)
+            //            UIApplication.shared.keyWindow?.endEditing(true)
             endEditing()
         }
     }
@@ -312,7 +312,7 @@ struct UserAccountChangeView: View {
     
     // MARK: -管理用電-排程管理-編輯
     func PATCH_URLRequest_user_setting(_ data : String, _ type : String){
-     
+        
         var components = URLComponents()
         components.queryItems = [
             URLQueryItem(name: type, value: data),
@@ -325,7 +325,7 @@ struct UserAccountChangeView: View {
         let token = UserDefaults.standard.string(forKey: "access_token")!
         let url = PocUrl + "api/main/user-setting"
         var request = URLRequest(url: URL(string: url)!)
-
+        
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "PATCH"
@@ -366,7 +366,7 @@ struct UserAccountChangeView: View {
 
 struct UserPasswordChangeView: View {
     @Binding var loginflag: Bool
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>        
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     let user_id  = CurrentUserID
     @State private var oldPassword:String = ""
     @State private var newPassword:String = ""
@@ -395,14 +395,14 @@ struct UserPasswordChangeView: View {
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, alignment: .center)
                     .padding(.top, 15)
                 
-//                Text("密碼為8-12字元長度的符號英文字母，以及數字混合字串")                
+                //                Text("密碼為8-12字元長度的符號英文字母，以及數字混合字串")
                 Text("必須包含大小寫英文字母、數字和特殊符號")
                     .font(.custom("NotoSansTC-Medium", size: 16))
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, alignment: .center)
                     .foregroundColor(.gray)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 13).padding(.top, 15)
-                                
+                
                 Group{
                     HStack(spacing: 0){
                         Text("*").font(.system(size: 24)).foregroundColor(.red)
@@ -412,11 +412,11 @@ struct UserPasswordChangeView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, alignment: .leading)
                     .padding(.horizontal).padding(.top, 15)
-
+                    
                     ZStack {
                         if isOldSecure {
                             SecureField("請輸入原密碼", text: $oldPassword, onCommit: validateOldPassword)
-                                
+                            
                         } else {
                             TextField("請輸入原密碼", text: $oldPassword, onCommit: validateOldPassword)
                         }
@@ -438,7 +438,7 @@ struct UserPasswordChangeView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 52, alignment: .leading)
                     .padding(.horizontal, 13)
-                                        
+                    
                     Text(oldPasswordErrorMessage)
                         .font(.custom("NotoSansTC-Medium", size: 12))
                         .foregroundColor(.red)
@@ -481,7 +481,7 @@ struct UserPasswordChangeView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 52, alignment: .leading)
                     .padding(.horizontal, 13)
-                                        
+                    
                     Text(passwordErrorMessage)
                         .font(.system(size: 12))
                         .foregroundColor(.red)
@@ -523,10 +523,10 @@ struct UserPasswordChangeView: View {
                     .frame(minWidth: 0, maxWidth: .infinity)
                     .frame(height: 52, alignment: .leading)
                     .padding(.horizontal, 13)
-                        
+                    
                     Text(confirmedPasswordErrorMessage)
                         .font(.custom("NotoSansTC-Medium", size: 12))
-//                        .font(.system(size: 12))
+                    //                        .font(.system(size: 12))
                         .foregroundColor(.red)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, alignment: .leading)
                         .padding(.horizontal, 13)
@@ -556,7 +556,7 @@ struct UserPasswordChangeView: View {
             
             .navigationBarTitle("")
         }.onTapGesture {
-//            UIApplication.shared.keyWindow?.endEditing(true)
+            //            UIApplication.shared.keyWindow?.endEditing(true)
             endEditing()
         }
         .alert(isPresented: self.$showAlert, content: {
@@ -580,7 +580,7 @@ struct UserPasswordChangeView: View {
     }
     
     func PATCH_URLRequest_password_reset(_ oldPassword : String, _ newPassword : String, _ confirmNewPassword : String){
-     
+        
         var components = URLComponents()
         components.queryItems = [
             URLQueryItem(name: "oriPassword", value: oldPassword),
@@ -595,7 +595,7 @@ struct UserPasswordChangeView: View {
         let token = UserDefaults.standard.string(forKey: "access_token")!
         let url = PocUrl + "api/main/password-reset"
         var request = URLRequest(url: URL(string: url)!)
-
+        
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "PATCH"
@@ -646,9 +646,9 @@ struct UserPasswordChangeView: View {
             oldPasswordErrorMessage = "請輸入原密碼"
         }
     }
-        
+    
     private func validatePassword() {
-
+        
         let passwordRegex = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,12}$"
         let passwordPredicate = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
         
@@ -715,11 +715,11 @@ struct ModificationDataView: View {
     var body: some View {
         VStack{
             ModificationDataWebView(url: URL(string: "\(PocUrl)survey?user_id=\(CurrentUserID)")!, messageHandler: ConfirmHandler(isConfirm: $isConfirm), loginflag: $loginflag, shouldReload: $shouldReload, canGoBack: $canGoBack)
-            .onLoadStatusChanged {(Loading, error) in
-                if Loading {
-                    print("Loading……")
-                }                
-            }
+                .onLoadStatusChanged {(Loading, error) in
+                    if Loading {
+                        print("Loading……")
+                    }
+                }
         }
         .onAppear{
             print("進入資料修改頁面")
@@ -729,7 +729,7 @@ struct ModificationDataView: View {
         }
         .onChange(of: isConfirm) { value in
             if value{
-//                print("回上一頁")
+                //                print("回上一頁")
                 isConfirm = false
                 presentationMode.wrappedValue.dismiss()
             }
@@ -760,7 +760,7 @@ struct ModificationDataWebView: UIViewRepresentable {
         HTTPCookieStorage.shared.setCookies(cookies, for: url, mainDocumentURL: nil)
         view.load(URLRequest(url: url))
         view.navigationDelegate = delegate  //超連結委派處理
-                
+        
         // 新增左滑手勢識別功能
         let swipeGesture = UISwipeGestureRecognizer(target: context.coordinator, action: #selector(context.coordinator.handleSwipeGesture(_:)))
         swipeGesture.direction = .right
@@ -768,12 +768,12 @@ struct ModificationDataWebView: UIViewRepresentable {
         
         return view
     }
-        
+    
     func updateUIView(_ uiView: WKWebView, context: Context) {
         // you can access environment via context.environment here
         // Note that this method will be called A LOT
-//        print("updateUIView")
-
+        //        print("updateUIView")
+        
         if shouldReload {
             view.reload()
             shouldReload = false
@@ -790,7 +790,7 @@ struct ModificationDataWebView: UIViewRepresentable {
     func goBack() {
         view.goBack() // 返回上一页
     }
-        
+    
     class Coordinator: NSObject, WKNavigationDelegate {
         let parent: ModificationDataWebView
         
@@ -807,31 +807,31 @@ struct ModificationDataWebView: UIViewRepresentable {
             print("webView Fail")
         }
         
-        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {        
+        func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
             //重新導向登入頁面時
             if (webView.title! == "用戶登入")
             {
                 //返回登入介面
                 self.parent.loginflag = true
             }
-                        
+            
             if navigationAction.navigationType == .formResubmitted {
-                    if let url = navigationAction.request.url,
-                        UIApplication.shared.canOpenURL(url) {
-                        UIApplication.shared.open(url)
-                        print(url)
-                        decisionHandler(.cancel)
-                    } else {
-                        decisionHandler(.allow)
-                    }
+                if let url = navigationAction.request.url,
+                   UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url)
+                    print(url)
+                    decisionHandler(.cancel)
                 } else {
                     decisionHandler(.allow)
                 }
+            } else {
+                decisionHandler(.allow)
             }
-                    
+        }
+        
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-//            print("網頁讀取完成")
-//            print("網頁讀取完成\(webView.url!)")
+            //            print("網頁讀取完成")
+            //            print("網頁讀取完成\(webView.url!)")
             if(!webView.url!.absoluteString.contains("survey"))
             {
                 //返回登入介面
@@ -840,7 +840,7 @@ struct ModificationDataWebView: UIViewRepresentable {
             
             
             let jsRecordPayload: String = """
-
+                    
                     XMLHttpRequest.prototype.origOpen = XMLHttpRequest.prototype.open;
                     XMLHttpRequest.prototype.open = function(method, url, async, user, password) {
                         this.recordedMethod = method;
@@ -848,7 +848,7 @@ struct ModificationDataWebView: UIViewRepresentable {
                         this.origOpen(method, url, async, user, password);
                         
                     };
-
+                    
                     XMLHttpRequest.prototype.origSend = XMLHttpRequest.prototype.send;
                     
                     XMLHttpRequest.prototype.send = function(body) {
@@ -872,12 +872,12 @@ struct ModificationDataWebView: UIViewRepresentable {
                     };
                     
                     """
-
+            
             webView.evaluateJavaScript(jsRecordPayload, completionHandler: { result, error in
                 if error == nil {
                     print("success")
                 }else{
-
+                    
                 }
             } )
             
@@ -900,7 +900,7 @@ struct ModificationDataWebView: UIViewRepresentable {
             if let urlx = navigationAction.request.url {
                 // 在這裡處理超連結的點擊事件
                 // 你可以檢查 url，然後決定是否打開連結
-//                print("User clicked on URL: \(urlx)")
+                //                print("User clicked on URL: \(urlx)")
                 if(webView.url != urlx)
                 {
                     print("URL : \(urlx)")
@@ -917,13 +917,13 @@ struct ModificationDataWebView: UIViewRepresentable {
 
 class ConfirmHandler: NSObject, WKScriptMessageHandler {
     @Binding var isConfirm: Bool
-
+    
     init(isConfirm: Binding<Bool>) {
         _isConfirm = isConfirm
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-//        print(message.body)
+        //        print(message.body)
         self.isConfirm = true
     }
     

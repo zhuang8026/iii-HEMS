@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -130,6 +130,10 @@
 		EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Energy_ActiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = V2_AIOT; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		A98EB7F529B5CF9E007FB3AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -193,6 +197,7 @@
 		A98EB7FA29B5CF9E007FB3AD /* Energy-Active */ = {
 			isa = PBXGroup;
 			children = (
+				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
 				ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */,
 				ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */,
 				ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */,
@@ -295,11 +300,13 @@
 				A98EB7F429B5CF9E007FB3AD /* Sources */,
 				A98EB7F529B5CF9E007FB3AD /* Frameworks */,
 				A98EB7F629B5CF9E007FB3AD /* Resources */,
-				5847C5299A808962659FA976 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
 			);
 			name = "Energy-Active";
 			productName = "Energy-Active";
@@ -333,7 +340,6 @@
 				A98EB80E29B5CFA0007FB3AD /* Sources */,
 				A98EB80F29B5CFA0007FB3AD /* Frameworks */,
 				A98EB81029B5CFA0007FB3AD /* Resources */,
-				4EC04C0959DB4471CEA45F0E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -441,40 +447,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EC04C0959DB4471CEA45F0E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5847C5299A808962659FA976 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73A9C6DA5370F0E7EA843539 /* [CP] Check Pods Manifest.lock */ = {

@@ -68,13 +68,14 @@ struct ContentView: View {
                                 Text("管理用電")
                             }.badge(forapp.Manage_control_advice_bth) //勳章顯示相關功能
 
-                        ElectricityManageView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay, forapp: self.$forapp)
-                        //                    ElectricityManageWebUIView(loginflag: self.$loginflag)
-                            .font(.system(size: 30, weight: .bold, design: .rounded))
+                        AIOTView(robotIconDisplay: self.$robotIconDisplay)
+                            .foregroundColor(.g_blue) // 全局文字顏色為藍色
+//                            .font(.system(size: 16)) // 設置文字大小
+//                            .font(.system(size: 30, weight: .bold, design: .rounded))
                             .tabItem {
                                 Image(systemName: "bolt.horizontal.icloud.fill")
                                 Text("智慧控制")
-                            }.badge(forapp.Manage_control_advice_bth) //勳章顯示相關功能
+                            }
 
                         CustomerServiceView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay)
                             .font(.system(size: 30, weight: .bold, design: .rounded))
