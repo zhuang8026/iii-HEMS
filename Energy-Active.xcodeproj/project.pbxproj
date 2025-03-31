@@ -1,0 +1,930 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FA5876580A9C9001A67A208 /* Pods_Energy_Active_Energy_ActiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4802774AE0FF773AFFBBE8C /* Pods_Energy_Active_Energy_ActiveUITests.framework */; };
+		30A2C90A6907EC72341F8FA7 /* Pods_Energy_ActiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */; };
+		4CC0CC5D435FAE12648072CD /* Pods_Energy_Active.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6584A405E4A1C94BA71A5B0E /* Pods_Energy_Active.framework */; };
+		A940FCE92A0C846B00C50E57 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */; };
+		A96BE94F2BE9BC3300CD314C /* ElectricityManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */; };
+		A98376722A78E05600388D68 /* GraphicsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98376712A78E05600388D68 /* GraphicsAlert.swift */; };
+		A98EB7FC29B5CF9E007FB3AD /* Energy_ActiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */; };
+		A98EB7FE29B5CF9E007FB3AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */; };
+		A98EB80029B5CFA0007FB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98EB7FF29B5CFA0007FB3AD /* Assets.xcassets */; };
+		A98EB80329B5CFA0007FB3AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98EB80229B5CFA0007FB3AD /* Preview Assets.xcassets */; };
+		A98EB80D29B5CFA0007FB3AD /* Energy_ActiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB80C29B5CFA0007FB3AD /* Energy_ActiveTests.swift */; };
+		A98EB81729B5CFA0007FB3AD /* Energy_ActiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB81629B5CFA0007FB3AD /* Energy_ActiveUITests.swift */; };
+		A98EB81929B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB81829B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift */; };
+		A98EB82A29B5D25B007FB3AD /* ElectricityTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */; };
+		A98EB82C29B5D7E1007FB3AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB82B29B5D7E1007FB3AD /* LoginView.swift */; };
+		A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */; };
+		A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */; };
+		A98EB83829B5DBAC007FB3AD /* CustomerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */; };
+		A99A0AAA2CBE086900374F44 /* AppSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A0AA92CBE086900374F44 /* AppSocketManager.swift */; };
+		A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */; };
+		A99CF5CD2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */; };
+		A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */; };
+		A9A4D5D52BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */; };
+		A9A4D5D72BF3483100DB0A02 /* SchedulePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */; };
+		A9A4D5D92BF449FC00DB0A02 /* CreateReviseScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */; };
+		A9A4D5DB2BF71A1A00DB0A02 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */; };
+		A9BB780E2A08E7CD0087DE30 /* BindAppliancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */; };
+		A9F452532A0CE3DC00123E55 /* WarningCustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */; };
+		A9F452552A0CE5F400123E55 /* ApplianceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */; };
+		A9F452572A0CE65300123E55 /* ModifyElectricityTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */; };
+		A9F452592A17621A00123E55 /* Weekly_MsgAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */; };
+		A9F4525B2A176E6400123E55 /* ContinuousLoginAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */; };
+		A9F4525D2A1F348100123E55 /* ElectricityTrackingWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */; };
+		A9F4525F2A28747400123E55 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4525E2A28747400123E55 /* Config.swift */; };
+		A9F452672A299DEA00123E55 /* NotoSansTC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452612A299DE900123E55 /* NotoSansTC-Light.otf */; };
+		A9F452682A299DEA00123E55 /* NotoSansTC-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452622A299DE900123E55 /* NotoSansTC-Thin.otf */; };
+		A9F452692A299DEA00123E55 /* NotoSansTC-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452632A299DEA00123E55 /* NotoSansTC-Medium.otf */; };
+		A9F4526A2A299DEB00123E55 /* NotoSansTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452642A299DEA00123E55 /* NotoSansTC-Bold.otf */; };
+		A9F4526B2A299DEB00123E55 /* NotoSansTC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452652A299DEA00123E55 /* NotoSansTC-Regular.otf */; };
+		A9F4526C2A299DEB00123E55 /* NotoSansTC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452662A299DEA00123E55 /* NotoSansTC-Black.otf */; };
+		ABC7C2CB2C806947006AC2A7 /* NWPathMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */; };
+		ABC7C2CC2C806947006AC2A7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C72C806947006AC2A7 /* Models.swift */; };
+		ABC7C2CD2C806947006AC2A7 /* ChatWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */; };
+		ABC7C2CE2C806947006AC2A7 /* ChatLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */; };
+		ABC7C2CF2C806947006AC2A7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A98EB80929B5CFA0007FB3AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98EB7F029B5CF9E007FB3AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98EB7F729B5CF9E007FB3AD;
+			remoteInfo = "Energy-Active";
+		};
+		A98EB81329B5CFA0007FB3AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98EB7F029B5CF9E007FB3AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98EB7F729B5CF9E007FB3AD;
+			remoteInfo = "Energy-Active";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		316AAA923804360B04C1D46E /* Pods-Energy-Active.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active.release.xcconfig"; path = "Target Support Files/Pods-Energy-Active/Pods-Energy-Active.release.xcconfig"; sourceTree = "<group>"; };
+		6584A405E4A1C94BA71A5B0E /* Pods_Energy_Active.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Energy_Active.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4802774AE0FF773AFFBBE8C /* Pods_Energy_Active_Energy_ActiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Energy_Active_Energy_ActiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E903CA4691B2FC27F22F77 /* Pods-Energy-Active.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active.debug.xcconfig"; path = "Target Support Files/Pods-Energy-Active/Pods-Energy-Active.debug.xcconfig"; sourceTree = "<group>"; };
+		A90450352A3AFC8F0061C974 /* Energy-Active.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Energy-Active.entitlements"; sourceTree = "<group>"; };
+		A915D97029CD57B000D94BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A93CBEE1649B72B48B26EB6D /* Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig"; path = "Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityManageView.swift; sourceTree = "<group>"; };
+		A98376712A78E05600388D68 /* GraphicsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsAlert.swift; sourceTree = "<group>"; };
+		A98EB7F829B5CF9E007FB3AD /* Energy-Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Energy-Active.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveApp.swift; sourceTree = "<group>"; };
+		A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A98EB7FF29B5CFA0007FB3AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A98EB80229B5CFA0007FB3AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A98EB80829B5CFA0007FB3AD /* Energy-ActiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Energy-ActiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98EB80C29B5CFA0007FB3AD /* Energy_ActiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveTests.swift; sourceTree = "<group>"; };
+		A98EB81229B5CFA0007FB3AD /* Energy-ActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Energy-ActiveUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98EB81629B5CFA0007FB3AD /* Energy_ActiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveUITests.swift; sourceTree = "<group>"; };
+		A98EB81829B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityTrackingView.swift; sourceTree = "<group>"; };
+		A98EB82B29B5D7E1007FB3AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnergyReportView.swift; sourceTree = "<group>"; };
+		A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityManageWebUIView.swift; sourceTree = "<group>"; };
+		A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceView.swift; sourceTree = "<group>"; };
+		A99A0AA92CBE086900374F44 /* AppSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSocketManager.swift; sourceTree = "<group>"; };
+		A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electricity_MsgAlert.swift; sourceTree = "<group>"; };
+		A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDeviceUIView.swift; sourceTree = "<group>"; };
+		A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityScheduleView.swift; sourceTree = "<group>"; };
+		A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHistoryPageView.swift; sourceTree = "<group>"; };
+		A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePageView.swift; sourceTree = "<group>"; };
+		A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviseScheduleView.swift; sourceTree = "<group>"; };
+		A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
+		A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindAppliancesView.swift; sourceTree = "<group>"; };
+		A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningCustomAlert.swift; sourceTree = "<group>"; };
+		A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceUIView.swift; sourceTree = "<group>"; };
+		A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyElectricityTargetView.swift; sourceTree = "<group>"; };
+		A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekly_MsgAlert.swift; sourceTree = "<group>"; };
+		A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousLoginAlert.swift; sourceTree = "<group>"; };
+		A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityTrackingWebView.swift; sourceTree = "<group>"; };
+		A9F4525E2A28747400123E55 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A9F452612A299DE900123E55 /* NotoSansTC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Light.otf"; sourceTree = "<group>"; };
+		A9F452622A299DE900123E55 /* NotoSansTC-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Thin.otf"; sourceTree = "<group>"; };
+		A9F452632A299DEA00123E55 /* NotoSansTC-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Medium.otf"; sourceTree = "<group>"; };
+		A9F452642A299DEA00123E55 /* NotoSansTC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.otf"; sourceTree = "<group>"; };
+		A9F452652A299DEA00123E55 /* NotoSansTC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Regular.otf"; sourceTree = "<group>"; };
+		A9F452662A299DEA00123E55 /* NotoSansTC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Black.otf"; sourceTree = "<group>"; };
+		AB8CD1724BF8DA2984A51EA9 /* Pods-Energy-ActiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-ActiveTests.debug.xcconfig"; path = "Target Support Files/Pods-Energy-ActiveTests/Pods-Energy-ActiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWPathMonitor.swift; sourceTree = "<group>"; };
+		ABC7C2C72C806947006AC2A7 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindow.swift; sourceTree = "<group>"; };
+		ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLoading.swift; sourceTree = "<group>"; };
+		ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		AD30E416B664B839286180F6 /* Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig"; path = "Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C6DC15629F73920EF18AC91C /* Pods-Energy-ActiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-ActiveTests.release.xcconfig"; path = "Target Support Files/Pods-Energy-ActiveTests/Pods-Energy-ActiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Energy_ActiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98EB7F529B5CF9E007FB3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CC0CC5D435FAE12648072CD /* Pods_Energy_Active.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB80529B5CFA0007FB3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A2C90A6907EC72341F8FA7 /* Pods_Energy_ActiveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB80F29B5CFA0007FB3AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA5876580A9C9001A67A208 /* Pods_Energy_Active_Energy_ActiveUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		89CB01D649C0CEB98B2C66D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6584A405E4A1C94BA71A5B0E /* Pods_Energy_Active.framework */,
+				A4802774AE0FF773AFFBBE8C /* Pods_Energy_Active_Energy_ActiveUITests.framework */,
+				EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A98EB7EF29B5CF9E007FB3AD = {
+			isa = PBXGroup;
+			children = (
+				A98EB7FA29B5CF9E007FB3AD /* Energy-Active */,
+				A98EB80B29B5CFA0007FB3AD /* Energy-ActiveTests */,
+				A98EB81529B5CFA0007FB3AD /* Energy-ActiveUITests */,
+				A98EB7F929B5CF9E007FB3AD /* Products */,
+				B81021EEAE37FF37F24C894C /* Pods */,
+				89CB01D649C0CEB98B2C66D9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A98EB7F929B5CF9E007FB3AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98EB7F829B5CF9E007FB3AD /* Energy-Active.app */,
+				A98EB80829B5CFA0007FB3AD /* Energy-ActiveTests.xctest */,
+				A98EB81229B5CFA0007FB3AD /* Energy-ActiveUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A98EB7FA29B5CF9E007FB3AD /* Energy-Active */ = {
+			isa = PBXGroup;
+			children = (
+				ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */,
+				ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */,
+				ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */,
+				A99A0AA92CBE086900374F44 /* AppSocketManager.swift */,
+				ABC7C2C72C806947006AC2A7 /* Models.swift */,
+				ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */,
+				A90450352A3AFC8F0061C974 /* Energy-Active.entitlements */,
+				A915D97029CD57B000D94BDE /* Info.plist */,
+				A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */,
+				A9F4525E2A28747400123E55 /* Config.swift */,
+				A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */,
+				A98EB82B29B5D7E1007FB3AD /* LoginView.swift */,
+				A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */,
+				A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */,
+				A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */,
+				A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */,
+				A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */,
+				A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */,
+				A98376712A78E05600388D68 /* GraphicsAlert.swift */,
+				A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */,
+				A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */,
+				A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */,
+				A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */,
+				A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */,
+				A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */,
+				A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */,
+				A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */,
+				A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */,
+				A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */,
+				A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */,
+				A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */,
+				A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */,
+				A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */,
+				A9F452602A299CDA00123E55 /* Fonts */,
+				A98EB7FF29B5CFA0007FB3AD /* Assets.xcassets */,
+				A98EB80129B5CFA0007FB3AD /* Preview Content */,
+			);
+			path = "Energy-Active";
+			sourceTree = "<group>";
+		};
+		A98EB80129B5CFA0007FB3AD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A98EB80229B5CFA0007FB3AD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A98EB80B29B5CFA0007FB3AD /* Energy-ActiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				A98EB80C29B5CFA0007FB3AD /* Energy_ActiveTests.swift */,
+			);
+			path = "Energy-ActiveTests";
+			sourceTree = "<group>";
+		};
+		A98EB81529B5CFA0007FB3AD /* Energy-ActiveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A98EB81629B5CFA0007FB3AD /* Energy_ActiveUITests.swift */,
+				A98EB81829B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift */,
+			);
+			path = "Energy-ActiveUITests";
+			sourceTree = "<group>";
+		};
+		A9F452602A299CDA00123E55 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A9F452662A299DEA00123E55 /* NotoSansTC-Black.otf */,
+				A9F452642A299DEA00123E55 /* NotoSansTC-Bold.otf */,
+				A9F452612A299DE900123E55 /* NotoSansTC-Light.otf */,
+				A9F452632A299DEA00123E55 /* NotoSansTC-Medium.otf */,
+				A9F452652A299DEA00123E55 /* NotoSansTC-Regular.otf */,
+				A9F452622A299DE900123E55 /* NotoSansTC-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B81021EEAE37FF37F24C894C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5E903CA4691B2FC27F22F77 /* Pods-Energy-Active.debug.xcconfig */,
+				316AAA923804360B04C1D46E /* Pods-Energy-Active.release.xcconfig */,
+				A93CBEE1649B72B48B26EB6D /* Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig */,
+				AD30E416B664B839286180F6 /* Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig */,
+				AB8CD1724BF8DA2984A51EA9 /* Pods-Energy-ActiveTests.debug.xcconfig */,
+				C6DC15629F73920EF18AC91C /* Pods-Energy-ActiveTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98EB7F729B5CF9E007FB3AD /* Energy-Active */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98EB81C29B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-Active" */;
+			buildPhases = (
+				C8544EDE8164CCE826EF32C1 /* [CP] Check Pods Manifest.lock */,
+				A98EB7F429B5CF9E007FB3AD /* Sources */,
+				A98EB7F529B5CF9E007FB3AD /* Frameworks */,
+				A98EB7F629B5CF9E007FB3AD /* Resources */,
+				5847C5299A808962659FA976 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Energy-Active";
+			productName = "Energy-Active";
+			productReference = A98EB7F829B5CF9E007FB3AD /* Energy-Active.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A98EB80729B5CFA0007FB3AD /* Energy-ActiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98EB81F29B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-ActiveTests" */;
+			buildPhases = (
+				4D4DB1FD3CB29EEEDD51688A /* [CP] Check Pods Manifest.lock */,
+				A98EB80429B5CFA0007FB3AD /* Sources */,
+				A98EB80529B5CFA0007FB3AD /* Frameworks */,
+				A98EB80629B5CFA0007FB3AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98EB80A29B5CFA0007FB3AD /* PBXTargetDependency */,
+			);
+			name = "Energy-ActiveTests";
+			productName = "Energy-ActiveTests";
+			productReference = A98EB80829B5CFA0007FB3AD /* Energy-ActiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A98EB81129B5CFA0007FB3AD /* Energy-ActiveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98EB82229B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-ActiveUITests" */;
+			buildPhases = (
+				73A9C6DA5370F0E7EA843539 /* [CP] Check Pods Manifest.lock */,
+				A98EB80E29B5CFA0007FB3AD /* Sources */,
+				A98EB80F29B5CFA0007FB3AD /* Frameworks */,
+				A98EB81029B5CFA0007FB3AD /* Resources */,
+				4EC04C0959DB4471CEA45F0E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98EB81429B5CFA0007FB3AD /* PBXTargetDependency */,
+			);
+			name = "Energy-ActiveUITests";
+			productName = "Energy-ActiveUITests";
+			productReference = A98EB81229B5CFA0007FB3AD /* Energy-ActiveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98EB7F029B5CF9E007FB3AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					A98EB7F729B5CF9E007FB3AD = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					A98EB80729B5CFA0007FB3AD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A98EB7F729B5CF9E007FB3AD;
+					};
+					A98EB81129B5CFA0007FB3AD = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = A98EB7F729B5CF9E007FB3AD;
+					};
+				};
+			};
+			buildConfigurationList = A98EB7F329B5CF9E007FB3AD /* Build configuration list for PBXProject "Energy-Active" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A98EB7EF29B5CF9E007FB3AD;
+			productRefGroup = A98EB7F929B5CF9E007FB3AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98EB7F729B5CF9E007FB3AD /* Energy-Active */,
+				A98EB80729B5CFA0007FB3AD /* Energy-ActiveTests */,
+				A98EB81129B5CFA0007FB3AD /* Energy-ActiveUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A98EB7F629B5CF9E007FB3AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9F4526B2A299DEB00123E55 /* NotoSansTC-Regular.otf in Resources */,
+				A9F4526C2A299DEB00123E55 /* NotoSansTC-Black.otf in Resources */,
+				A98EB80329B5CFA0007FB3AD /* Preview Assets.xcassets in Resources */,
+				A98EB80029B5CFA0007FB3AD /* Assets.xcassets in Resources */,
+				A9F452682A299DEA00123E55 /* NotoSansTC-Thin.otf in Resources */,
+				A9F452692A299DEA00123E55 /* NotoSansTC-Medium.otf in Resources */,
+				A9F4526A2A299DEB00123E55 /* NotoSansTC-Bold.otf in Resources */,
+				A9F452672A299DEA00123E55 /* NotoSansTC-Light.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB80629B5CFA0007FB3AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB81029B5CFA0007FB3AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4D4DB1FD3CB29EEEDD51688A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Energy-ActiveTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EC04C0959DB4471CEA45F0E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5847C5299A808962659FA976 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Energy-Active/Pods-Energy-Active-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73A9C6DA5370F0E7EA843539 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Energy-Active-Energy-ActiveUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8544EDE8164CCE826EF32C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Energy-Active-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98EB7F429B5CF9E007FB3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A4D5DB2BF71A1A00DB0A02 /* CustomAlertView.swift in Sources */,
+				ABC7C2CF2C806947006AC2A7 /* ChatBubble.swift in Sources */,
+				A9F452532A0CE3DC00123E55 /* WarningCustomAlert.swift in Sources */,
+				A96BE94F2BE9BC3300CD314C /* ElectricityManageView.swift in Sources */,
+				A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */,
+				A9A4D5D92BF449FC00DB0A02 /* CreateReviseScheduleView.swift in Sources */,
+				A99A0AAA2CBE086900374F44 /* AppSocketManager.swift in Sources */,
+				A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */,
+				A9BB780E2A08E7CD0087DE30 /* BindAppliancesView.swift in Sources */,
+				A9A4D5D52BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift in Sources */,
+				A940FCE92A0C846B00C50E57 /* CustomProgressView.swift in Sources */,
+				A98EB82A29B5D25B007FB3AD /* ElectricityTrackingView.swift in Sources */,
+				A98376722A78E05600388D68 /* GraphicsAlert.swift in Sources */,
+				A98EB7FE29B5CF9E007FB3AD /* ContentView.swift in Sources */,
+				A98EB82C29B5D7E1007FB3AD /* LoginView.swift in Sources */,
+				A9F4525D2A1F348100123E55 /* ElectricityTrackingWebView.swift in Sources */,
+				A9A4D5D72BF3483100DB0A02 /* SchedulePageView.swift in Sources */,
+				A99CF5CD2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift in Sources */,
+				A98EB83829B5DBAC007FB3AD /* CustomerServiceView.swift in Sources */,
+				A9F4525F2A28747400123E55 /* Config.swift in Sources */,
+				A98EB7FC29B5CF9E007FB3AD /* Energy_ActiveApp.swift in Sources */,
+				A9F452552A0CE5F400123E55 /* ApplianceUIView.swift in Sources */,
+				A9F4525B2A176E6400123E55 /* ContinuousLoginAlert.swift in Sources */,
+				A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */,
+				ABC7C2CB2C806947006AC2A7 /* NWPathMonitor.swift in Sources */,
+				A9F452592A17621A00123E55 /* Weekly_MsgAlert.swift in Sources */,
+				ABC7C2CC2C806947006AC2A7 /* Models.swift in Sources */,
+				A9F452572A0CE65300123E55 /* ModifyElectricityTargetView.swift in Sources */,
+				A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */,
+				ABC7C2CD2C806947006AC2A7 /* ChatWindow.swift in Sources */,
+				ABC7C2CE2C806947006AC2A7 /* ChatLoading.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB80429B5CFA0007FB3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98EB80D29B5CFA0007FB3AD /* Energy_ActiveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98EB80E29B5CFA0007FB3AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98EB81929B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift in Sources */,
+				A98EB81729B5CFA0007FB3AD /* Energy_ActiveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A98EB80A29B5CFA0007FB3AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98EB7F729B5CF9E007FB3AD /* Energy-Active */;
+			targetProxy = A98EB80929B5CFA0007FB3AD /* PBXContainerItemProxy */;
+		};
+		A98EB81429B5CFA0007FB3AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98EB7F729B5CF9E007FB3AD /* Energy-Active */;
+			targetProxy = A98EB81329B5CFA0007FB3AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A98EB81A29B5CFA0007FB3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A98EB81B29B5CFA0007FB3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A98EB81D29B5CFA0007FB3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E903CA4691B2FC27F22F77 /* Pods-Energy-Active.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Energy-Active/Energy-Active.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Energy-Active/Preview Content\"";
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Energy-Active/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A98EB81E29B5CFA0007FB3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316AAA923804360B04C1D46E /* Pods-Energy-Active.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Energy-Active/Energy-Active.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Energy-Active/Preview Content\"";
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Energy-Active/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 3.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A98EB82029B5CFA0007FB3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB8CD1724BF8DA2984A51EA9 /* Pods-Energy-ActiveTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Energy-Active.app/Energy-Active";
+			};
+			name = Debug;
+		};
+		A98EB82129B5CFA0007FB3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6DC15629F73920EF18AC91C /* Pods-Energy-ActiveTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Energy-Active.app/Energy-Active";
+			};
+			name = Release;
+		};
+		A98EB82329B5CFA0007FB3AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A93CBEE1649B72B48B26EB6D /* Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "Energy-Active";
+			};
+			name = Debug;
+		};
+		A98EB82429B5CFA0007FB3AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD30E416B664B839286180F6 /* Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 856VG2FXU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = "Energy-Active";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98EB7F329B5CF9E007FB3AD /* Build configuration list for PBXProject "Energy-Active" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98EB81A29B5CFA0007FB3AD /* Debug */,
+				A98EB81B29B5CFA0007FB3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98EB81C29B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-Active" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98EB81D29B5CFA0007FB3AD /* Debug */,
+				A98EB81E29B5CFA0007FB3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98EB81F29B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-ActiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98EB82029B5CFA0007FB3AD /* Debug */,
+				A98EB82129B5CFA0007FB3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98EB82229B5CFA0007FB3AD /* Build configuration list for PBXNativeTarget "Energy-ActiveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98EB82329B5CFA0007FB3AD /* Debug */,
+				A98EB82429B5CFA0007FB3AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A98EB7F029B5CF9E007FB3AD /* Project object */;
+}

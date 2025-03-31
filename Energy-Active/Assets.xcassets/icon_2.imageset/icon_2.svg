@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76.855" height="114.929" viewBox="0 0 76.855 114.929">
+    <g data-name="10002">
+        <path data-name="矩形 56" transform="translate(11.807 1.728)" style="fill:#69c8be" d="M0 0h62.387v103.736H0z"/>
+        <path data-name="矩形 57" transform="translate(11.807 13.087)" style="fill:#21a1a0" d="M0 0h62.387v92.378H0z"/>
+        <path data-name="路径 35" d="M82.274 2.6h58.973a2.1 2.1 0 0 1 2.174 2.094v99.415a2.1 2.1 0 0 1-2.174 2.094H82.274a2.1 2.1 0 0 1-2.174-2.094V4.694A2.158 2.158 0 0 1 82.274 2.6z" transform="translate(-68.293 -.872)" style="stroke-width:3.456px;stroke:#fff;fill:none"/>
+        <path data-name="直线 14" transform="translate(11.807 38.214)" style="stroke-width:3.456px;stroke:#fff;fill:none" d="M0 0h64.387"/>
+        <path data-name="直线 15" transform="translate(59.831 21.076)" style="stroke-linecap:round;stroke:#ffd943;stroke-width:3.456px;fill:none" d="M0 0v7.199"/>
+        <path data-name="直线 16" transform="translate(59.831 55.35)" style="stroke-linecap:round;stroke-width:3.456px;stroke:#fff;fill:none" d="M0 0v7.332"/>
+        <path data-name="路径 36" d="M68.4 113.394 108.925 82.2" transform="translate(-66.582 -20.198)" style="stroke-width:2.592px;stroke-linecap:round;stroke:#fff;fill:none"/>
+        <path data-name="路径 37" d="m90.3 79.23 19.2-14.53" transform="translate(-69.919 -7.318)" style="stroke-width:2.592px;stroke-linecap:round;stroke:#fff;fill:none"/>
+        <path data-name="路径 38" d="M85.5 124.1a2.133 2.133 0 0 0 4.266 0zm0-8.4v8.265h4.132V115.7z" transform="translate(-67.969 -11.302)" style="fill:#fff"/>
+        <path data-name="路径 39" d="M138.6 124.1a2.133 2.133 0 0 0 4.266 0zm0-8.4v8.265h4.133V115.7z" transform="translate(-74.803 -11.302)" style="fill:#fff"/>
+    </g>
+</svg>

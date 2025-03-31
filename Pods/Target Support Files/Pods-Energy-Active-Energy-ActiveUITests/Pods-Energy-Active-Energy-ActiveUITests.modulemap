@@ -1,0 +1,6 @@
+framework module Pods_Energy_Active_Energy_ActiveUITests {
+  umbrella header "Pods-Energy-Active-Energy-ActiveUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

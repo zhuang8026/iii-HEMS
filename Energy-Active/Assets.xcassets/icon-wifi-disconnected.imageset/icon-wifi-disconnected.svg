@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="38wr92552a">
+            <path data-name="矩形 85" transform="translate(0 .417)" style="fill:#fff" d="M0 0h20v20H0z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(0 -.417)" style="clip-path:url(#38wr92552a)">
+        <path data-name="路径 124" d="m.833 1.25 18.334 18.333" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 125" d="M13.933 9.633a9.116 9.116 0 0 1 1.9 1.242" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 126" d="M4.167 10.875a9.116 9.116 0 0 1 4.308-1.991" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 127" d="M8.925 4.625a13.333 13.333 0 0 1 9.892 3.292" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 128" d="M1.183 7.917a13.258 13.258 0 0 1 3.917-2.4" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 129" d="M7.108 13.841a5 5 0 0 1 5.792 0" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+        <path data-name="路径 130" d="M10 17.083h.008" style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.667px"/>
+    </g>
+</svg>

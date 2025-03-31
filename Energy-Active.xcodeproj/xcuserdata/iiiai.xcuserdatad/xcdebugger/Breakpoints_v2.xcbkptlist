@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "362FF9EF-7B79-4E85-9209-C4B2F770F2AD"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C5A5B62-B512-4652-A202-8D1C67D42C14"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Energy-Active/LoginView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "userContentController(_:didReceive:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8C5A5B62-B512-4652-A202-8D1C67D42C14 - 56c179dc97e76da1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Energy_Active.MessageHandler.userContentController(_: __C.WKUserContentController, didReceive: __C.WKScriptMessage) -&gt; ()"
+                  moduleName = "Energy-Active"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iiiai/Documents/XcodeProject/Energy-Active/Energy-Active/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "319"
+                  endingLineNumber = "319"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "8C5A5B62-B512-4652-A202-8D1C67D42C14 - 56c179dc97e76d3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Energy_Active.MessageHandler.userContentController(_: __C.WKUserContentController, didReceive: __C.WKScriptMessage) -&gt; ()"
+                  moduleName = "Energy-Active"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iiiai/Documents/XcodeProject/Energy-Active/Energy-Active/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "322"
+                  endingLineNumber = "322"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "8C5A5B62-B512-4652-A202-8D1C67D42C14 - 56c179dc97e76ddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Energy_Active.MessageHandler.userContentController(_: __C.WKUserContentController, didReceive: __C.WKScriptMessage) -&gt; ()"
+                  moduleName = "Energy-Active"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iiiai/Documents/XcodeProject/Energy-Active/Energy-Active/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "321"
+                  endingLineNumber = "321"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "8C5A5B62-B512-4652-A202-8D1C67D42C14 - 56c179dc97e76d1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Energy_Active.MessageHandler.userContentController(_: __C.WKUserContentController, didReceive: __C.WKScriptMessage) -&gt; ()"
+                  moduleName = "Energy-Active"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iiiai/Documents/XcodeProject/Energy-Active/Energy-Active/LoginView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "323"
+                  endingLineNumber = "323"
+                  offsetFromSymbolStart = "628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="75.741" height="93.448" viewBox="0 0 75.741 93.448">
+    <g data-name="10001">
+        <path data-name="矩形 53" transform="translate(57.428 30.605)" style="fill:#ffd943" d="M0 0h15.479v52.276H0z"/>
+        <path data-name="矩形 54" transform="translate(3.576 30.605)" style="fill:#69c8be" d="M0 0h53.018v52.276H0z"/>
+        <path data-name="路径 31" d="m114 36.559 14.552 11.586a2.506 2.506 0 0 0 2.966.093L156.451 29.7" transform="translate(-104.678 -26.902)" style="stroke:#21a1a0;stroke-linecap:round;fill:none;stroke-width:4px"/>
+        <path data-name="路径 32" d="M113.1 125.188a1.668 1.668 0 0 0 3.337 0zm0-6.488v6.488h3.244V118.7z" transform="translate(-104.612 -33.409)" style="fill:#fff"/>
+        <path data-name="路径 33" d="M173 125.188a1.668 1.668 0 0 0 3.337 0zm0-6.488v6.488h3.244V118.7z" transform="translate(-108.991 -33.409)" style="fill:#fff"/>
+        <path data-name="直线 13" transform="translate(56.872 27.824)" style="stroke:#fff;fill:none;stroke-width:4px" d="m0 0 .062 57.033"/>
+        <path data-name="路径 34" d="M108.51 58.4h66.921a2.393 2.393 0 0 1 2.41 2.41v49.59a2.393 2.393 0 0 1-2.41 2.41H108.51a2.393 2.393 0 0 1-2.41-2.41V60.9a2.415 2.415 0 0 1 2.41-2.5z" transform="translate(-104.1 -29)" style="stroke:#fff;fill:none;stroke-width:4px"/>
+    </g>
+</svg>
