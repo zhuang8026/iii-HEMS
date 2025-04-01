@@ -129,7 +129,7 @@ struct AirConditioner: View {
                     /// 請開始電源
                     VStack {
                         Spacer()
-                        Image("open-power-hint")
+                        Image("openPowerHint")
                         Text("請先啟動設備")
                             .font(.body)
                             .multilineTextAlignment(.center)

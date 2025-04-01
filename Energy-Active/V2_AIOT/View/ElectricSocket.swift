@@ -46,6 +46,8 @@ struct ElectricSocket: View {
             )
             .cornerRadius(75)
             
+            Text("狀態： \(isPowerOn ? "開" : "關")")
+                .padding()
             Spacer()
         }
     }

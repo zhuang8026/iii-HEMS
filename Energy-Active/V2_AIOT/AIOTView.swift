@@ -11,7 +11,8 @@ struct AIOTView: View {
     @EnvironmentObject var mqttManager: MQTTManager // 從環境取得 MQTTManager
     
 //    @Binding var loginflag:Bool
-    @Binding var robotIconDisplay:Bool
+    @Binding var robotIconDisplay:Bool // 機器人顯示控制
+    @Binding var showAIOTFullScreen:Bool // 智慧控制全螢幕控制（默認：關閉）
 
     @State private var selectedTab = "" // 選擇設備控制
     @State private var status = false // 控制顯示標題名稱（內含 返回 icon）
@@ -42,9 +43,10 @@ struct AIOTView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            // ✅ 傳遞 selectedTab 和 status
-            HeaderName(selectedTab: $selectedTab, status: bindingForSelectedTab())
-                
+            if(selectedTab != "") {
+                // ✅ 傳遞 selectedTab 和 status
+                HeaderName(selectedTab: $selectedTab, status: bindingForSelectedTab(), showAIOTFullScreen: $showAIOTFullScreen)
+            }
             // 測試使用，可去除
             // Text(mqttManager.loginResponse ?? "等待登入回應...")
             

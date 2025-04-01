@@ -13,6 +13,7 @@ struct HeaderName: View {
     
     @Binding var selectedTab: String // 標題名稱
     @Binding var status: Bool // 是否要顯示返回（false -> back, true -> show title）
+    @Binding var showAIOTFullScreen: Bool // 智慧控制全螢幕控制（默認：關閉）
     @State private var isAnimating = false // 動畫
     
     var body: some View {
@@ -20,6 +21,9 @@ struct HeaderName: View {
             if status {
                 Image("arrow-left") // 改成返回按鈕
                     .font(.system(size: 20))
+                    .onTapGesture {
+                        showAIOTFullScreen = false // ✅ 點擊後切換 status
+                    }
                 Spacer()
                 
                 // [顯示] 是否啟動AI決策
@@ -75,7 +79,8 @@ struct HeaderName: View {
                 Image("arrow-left") // 改成返回按鈕
                     .font(.system(size: 20))
                     .onTapGesture {
-                        status = true // ✅ 點擊後切換 status
+//                        status = true // ✅ 點擊後切換 status
+                        showAIOTFullScreen = false // ✅ 點擊後切換 status
                     }
                 
                 Spacer() // 推動其他內容到右側

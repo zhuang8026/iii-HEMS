@@ -132,7 +132,7 @@ struct RemoteControl: View {
                             /// 請先新增遙控器
                             VStack {
                                 Spacer()
-                                Image("open-power-hint")
+                                Image("openPowerHint")
                                 Text("請先新增遙控器")
                                     .font(.body)
                                     .multilineTextAlignment(.center)
