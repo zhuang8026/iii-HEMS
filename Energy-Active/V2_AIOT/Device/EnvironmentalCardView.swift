@@ -62,7 +62,7 @@ struct EnvironmentalCardView: View {
                     .frame(width: 50, height: 50) // 設定寬度和高度
                 VStack(alignment: .leading, spacing: 0) {
                     Text("二氧化碳")
-                       .font(.system(size: 14))
+                        .font(.system(size: 14))
         
                     Text("\(co2)")
                         .font(.system(size: 30, weight: .bold))

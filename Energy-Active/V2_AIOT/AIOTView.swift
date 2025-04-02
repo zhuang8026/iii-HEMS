@@ -18,10 +18,10 @@ struct AIOTView: View {
     @State private var status = false // 控制顯示標題名稱（內含 返回 icon）
     
     @AppStorage("isTempConnected") private var isTempConnected = true  // ✅ 溫濕度 記住連線狀態
-    @AppStorage("isACConnected") private var isACConnected = true      // ✅ 冷氣 記住連線狀態
-    @AppStorage("isDFConnected") private var isDFConnected = true      // ✅ 除濕機 記住連線狀態
+    @AppStorage("isACConnected")   private var isACConnected = true    // ✅ 冷氣 記住連線狀態
+    @AppStorage("isDFConnected")   private var isDFConnected = true    // ✅ 除濕機 記住連線狀態
     @AppStorage("isREMCConnected") private var isREMCConnected = true  // ✅ 遙控器 記住連線狀態
-    @AppStorage("isESTConnected") private var isESTConnected = true    // ✅ 插座 記住連線狀態
+    @AppStorage("isESTConnected")  private var isESTConnected = true   // ✅ 插座 記住連線狀態
     
     // ✅ 根據 selectedTab 動態決定 `status`
     private func bindingForSelectedTab() -> Binding<Bool> {
@@ -55,10 +55,9 @@ struct AIOTView: View {
                 case "溫濕度":
                     Temperature(isConnected: $isTempConnected)
                 case "空調":
-                    AirConditioner()
+                    AirConditioner(isConnected: $isACConnected)
                 case "除濕機":
-                    Dehumidifier()
-                
+                    Dehumidifier(isConnected: $isDFConnected)
                 case "遙控器":
                     RemoteControl(isConnected: $isREMCConnected)
                 case "插座":
