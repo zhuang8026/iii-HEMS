@@ -40,7 +40,7 @@ struct Energy_ActiveApp: App {
                 .environmentObject(electricityCreateReviseScheduleManager)
                 .environmentObject(electricityCustomDeleteAlertManager)
                 .environmentObject(electricityCustomAlertManager)
-
+            
                 .environmentObject(appStore)  // ✅ 注入 appStore 傳遞全域狀態
                 .environmentObject(mqttManager) // ✅ 注入 MQTTManager 讓所有頁面都能使用
             
@@ -113,9 +113,20 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     }
     
     // 接收到通知時更新徽章數
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
         // 設置徽章數量
         UIApplication.shared.applicationIconBadgeNumber = 1
         completionHandler()
     }
+    
+    // [Testing] Apple Push Notifications 測試
+//    func userNotificationCenter(_ center: UNUserNotificationCenter,
+//                                willPresent notification: UNNotification,
+//                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        // 前景通知顯示橫幅 + 聲音 + 徽章
+//        completionHandler([.banner, .sound, .badge])
+//    }
+    
 }

@@ -57,7 +57,7 @@ struct NavigationBar: View {
     private func updateSelectedTab() {
         if selectedTab.isEmpty, let firstAvailable = getAvailableTabs().first {
             selectedTab = firstAvailable
-            print("updateSelectedTab updateSelectedTab updateSelectedTab")
+            print("")
         }
     }
     /// 取得對應的 SF Symbols 圖示

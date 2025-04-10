@@ -26,19 +26,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NotoSansTC-Black.otf</string>
-		<string>NotoSansTC-Bold.otf</string>
-		<string>NotoSansTC-Medium.otf</string>
-		<string>NotoSansTC-Regular.otf</string>
-		<string>NotoSansTC-Light.otf</string>
-		<string>NotoSansTC-Thin.otf</string>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>remote-notification</string>
-	</array>
 
 	<!-- bluetooth device -->
 	<key>NSBluetoothWhenInUseUsageDescription</key>
@@ -61,5 +48,25 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>此應用程式需要存取您的位置以連接 Wi-Fi</string>
 
+	<!-- camera device -->
+	<key>NSCameraUsageDescription</key>
+	<string>我們需要使用您的相機來掃描 Wi-Fi QR Code</string>
+
+	<key>UIAppFonts</key>
+	<array>
+		<string>NotoSansTC-Black.otf</string>
+		<string>NotoSansTC-Bold.otf</string>
+		<string>NotoSansTC-Medium.otf</string>
+		<string>NotoSansTC-Regular.otf</string>
+		<string>NotoSansTC-Light.otf</string>
+		<string>NotoSansTC-Thin.otf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+	</array>
+	<key>com.apple.developer.networking.HotspotConfiguration</key>
+	<true/>
 </dict>
 </plist>

@@ -133,6 +133,9 @@ struct RemoteControl: View {
                             VStack {
                                 Spacer()
                                 Image("openPowerHint")
+                                    .resizable()
+                                    .scaledToFit() // 保持原比例，完整顯示
+                                    .frame(width: 100, height: 100) // 設定寬度和高度
                                 Text("請先新增遙控器")
                                     .font(.body)
                                     .multilineTextAlignment(.center)

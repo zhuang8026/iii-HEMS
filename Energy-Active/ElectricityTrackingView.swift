@@ -1038,7 +1038,7 @@ struct ElectricityTrackingView: View {
         let device_token = DeviceToken
         let update_time = getCurrentDateTime()
         let postData = ["user_id":user_id,"app_token":device_token,"update_time":update_time]
-        print(postData)
+        print("postData -> \(postData)")
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: postData, options: [])
             request.httpBody = jsonData

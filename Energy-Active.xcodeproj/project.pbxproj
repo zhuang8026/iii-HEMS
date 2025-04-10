@@ -25,7 +25,6 @@
 		A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */; };
 		A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */; };
 		A98EB83829B5DBAC007FB3AD /* CustomerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */; };
-		A99A0AAA2CBE086900374F44 /* AppSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99A0AA92CBE086900374F44 /* AppSocketManager.swift */; };
 		A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */; };
 		A99CF5CD2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */; };
 		A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */; };
@@ -47,11 +46,6 @@
 		A9F4526A2A299DEB00123E55 /* NotoSansTC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452642A299DEA00123E55 /* NotoSansTC-Bold.otf */; };
 		A9F4526B2A299DEB00123E55 /* NotoSansTC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452652A299DEA00123E55 /* NotoSansTC-Regular.otf */; };
 		A9F4526C2A299DEB00123E55 /* NotoSansTC-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452662A299DEA00123E55 /* NotoSansTC-Black.otf */; };
-		ABC7C2CB2C806947006AC2A7 /* NWPathMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */; };
-		ABC7C2CC2C806947006AC2A7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C72C806947006AC2A7 /* Models.swift */; };
-		ABC7C2CD2C806947006AC2A7 /* ChatWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */; };
-		ABC7C2CE2C806947006AC2A7 /* ChatLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */; };
-		ABC7C2CF2C806947006AC2A7 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +91,6 @@
 		A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnergyReportView.swift; sourceTree = "<group>"; };
 		A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityManageWebUIView.swift; sourceTree = "<group>"; };
 		A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceView.swift; sourceTree = "<group>"; };
-		A99A0AA92CBE086900374F44 /* AppSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSocketManager.swift; sourceTree = "<group>"; };
 		A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electricity_MsgAlert.swift; sourceTree = "<group>"; };
 		A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDeviceUIView.swift; sourceTree = "<group>"; };
 		A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityScheduleView.swift; sourceTree = "<group>"; };
@@ -120,17 +113,13 @@
 		A9F452652A299DEA00123E55 /* NotoSansTC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Regular.otf"; sourceTree = "<group>"; };
 		A9F452662A299DEA00123E55 /* NotoSansTC-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Black.otf"; sourceTree = "<group>"; };
 		AB8CD1724BF8DA2984A51EA9 /* Pods-Energy-ActiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-ActiveTests.debug.xcconfig"; path = "Target Support Files/Pods-Energy-ActiveTests/Pods-Energy-ActiveTests.debug.xcconfig"; sourceTree = "<group>"; };
-		ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWPathMonitor.swift; sourceTree = "<group>"; };
-		ABC7C2C72C806947006AC2A7 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatWindow.swift; sourceTree = "<group>"; };
-		ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLoading.swift; sourceTree = "<group>"; };
-		ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 		AD30E416B664B839286180F6 /* Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig"; path = "Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C6DC15629F73920EF18AC91C /* Pods-Energy-ActiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-ActiveTests.release.xcconfig"; path = "Target Support Files/Pods-Energy-ActiveTests/Pods-Energy-ActiveTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Energy_ActiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		4E1360682DA7BF6600CD275A /* V2_ChatAI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = V2_ChatAI; sourceTree = "<group>"; };
 		4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = V2_AIOT; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -197,13 +186,8 @@
 		A98EB7FA29B5CF9E007FB3AD /* Energy-Active */ = {
 			isa = PBXGroup;
 			children = (
+				4E1360682DA7BF6600CD275A /* V2_ChatAI */,
 				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
-				ABC7C2CA2C806947006AC2A7 /* ChatBubble.swift */,
-				ABC7C2C92C806947006AC2A7 /* ChatLoading.swift */,
-				ABC7C2C82C806947006AC2A7 /* ChatWindow.swift */,
-				A99A0AA92CBE086900374F44 /* AppSocketManager.swift */,
-				ABC7C2C72C806947006AC2A7 /* Models.swift */,
-				ABC7C2C62C806947006AC2A7 /* NWPathMonitor.swift */,
 				A90450352A3AFC8F0061C974 /* Energy-Active.entitlements */,
 				A915D97029CD57B000D94BDE /* Info.plist */,
 				A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */,
@@ -306,6 +290,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				4E1360682DA7BF6600CD275A /* V2_ChatAI */,
 				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
 			);
 			name = "Energy-Active";
@@ -501,12 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A4D5DB2BF71A1A00DB0A02 /* CustomAlertView.swift in Sources */,
-				ABC7C2CF2C806947006AC2A7 /* ChatBubble.swift in Sources */,
 				A9F452532A0CE3DC00123E55 /* WarningCustomAlert.swift in Sources */,
 				A96BE94F2BE9BC3300CD314C /* ElectricityManageView.swift in Sources */,
 				A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */,
 				A9A4D5D92BF449FC00DB0A02 /* CreateReviseScheduleView.swift in Sources */,
-				A99A0AAA2CBE086900374F44 /* AppSocketManager.swift in Sources */,
 				A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */,
 				A9BB780E2A08E7CD0087DE30 /* BindAppliancesView.swift in Sources */,
 				A9A4D5D52BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift in Sources */,
@@ -524,13 +507,9 @@
 				A9F452552A0CE5F400123E55 /* ApplianceUIView.swift in Sources */,
 				A9F4525B2A176E6400123E55 /* ContinuousLoginAlert.swift in Sources */,
 				A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */,
-				ABC7C2CB2C806947006AC2A7 /* NWPathMonitor.swift in Sources */,
 				A9F452592A17621A00123E55 /* Weekly_MsgAlert.swift in Sources */,
-				ABC7C2CC2C806947006AC2A7 /* Models.swift in Sources */,
 				A9F452572A0CE65300123E55 /* ModifyElectricityTargetView.swift in Sources */,
 				A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */,
-				ABC7C2CD2C806947006AC2A7 /* ChatWindow.swift in Sources */,
-				ABC7C2CE2C806947006AC2A7 /* ChatLoading.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +679,9 @@
 				INFOPLIST_FILE = "Energy-Active/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "此應用程式需要存取本地網路以連接 Wi-Fi";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "此應用程式需要存取您的位置以連接 Wi-Fi";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "此應用程式需要存取您的位置以搜尋 Wi-Fi 設備";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -712,7 +694,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_BUNDLE_IDENTIFIER = "William.ios.energy-active";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -742,6 +724,9 @@
 				INFOPLIST_FILE = "Energy-Active/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "此應用程式需要存取本地網路以連接 Wi-Fi";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "此應用程式需要存取您的位置以連接 Wi-Fi";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "此應用程式需要存取您的位置以搜尋 Wi-Fi 設備";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -754,7 +739,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.energy.active;
+				PRODUCT_BUNDLE_IDENTIFIER = "William.ios.energy-active";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
