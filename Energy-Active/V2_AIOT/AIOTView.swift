@@ -199,11 +199,12 @@ struct AIOTView: View {
     
     var body: some View {
         ZStack() {
-            if(appStore.userToken == nil) {
-                VStack(){
-                    UserLogin()
-                }
-            } else {
+//            if(appStore.userToken == nil) {
+//                ZStack(){
+//                    // 關閉 登入畫面
+//                    // UserLogin()
+//                }
+//            } else {
                 VStack(spacing: 20) {
                     // ✅ 傳遞 selectedTab 和 status
                     HeaderName(
@@ -386,21 +387,8 @@ struct AIOTView: View {
                         }
                     )
                 }
-            }
+//            }
         }
-        //        .alert(
-        //            "能源管家提示",
-        //            isPresented: $mqttManager.showDeviceAlert,
-        //            actions: {
-        //                Button("好的", role: .cancel) {
-        //                    print("執行 -> AI決策關閉")
-        //                    mqttManager.decisionEnabled = false
-        //                }
-        //            },
-        //            message: {
-        //                Text("AI決策已關閉")
-        //            }
-        //        )
     }
 }
 
