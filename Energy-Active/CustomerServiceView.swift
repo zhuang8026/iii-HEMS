@@ -72,8 +72,11 @@ struct CustomerServiceView: View {
                                 .frame( width: UIScreen.main.bounds.width, height: 60, alignment: .center)
                                 .background(Color(red: 61.0 / 255.0, green: 102.0 / 255.0, blue: 143.0 / 255.0))
                         }
-                        
-                        
+
+                        Text("\(version)")
+                            .font(.system(size: 12))
+                            .foregroundColor(.gray)
+                            .padding(.vertical, 10)
                         //                        // MARK: 測試異常用, 正式時請註解
                         //                        Button {
                         //                            print("測試異常")
@@ -89,6 +92,7 @@ struct CustomerServiceView: View {
                         
                         
                         Spacer()
+                      
                     }
                     
                     if(!self.isLoaded){

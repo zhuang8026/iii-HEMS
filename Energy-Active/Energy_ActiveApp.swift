@@ -25,7 +25,7 @@ struct Energy_ActiveApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @StateObject private var appStore = AppStore()  // 全域狀態管理
-    @StateObject private var mqttManager = MQTTManager.shared
+    @StateObject private var mqttManager = MQTTManagerMiddle.shared
     
     
     var body: some Scene {
@@ -73,8 +73,20 @@ struct Energy_ActiveApp: App {
                     }
                     
                     
-                    //MARK: 設置徽章為 0，避免開啟 App 時還顯示未清除的徽章
-                    //                      UIApplication.shared.applicationIconBadgeNumber = 0
+                    // MARK: 設置徽章為 0，避免開啟 App 時還顯示未清除的徽章
+                    // UIApplication.shared.applicationIconBadgeNumber = 0
+                    
+                    // MARK: 啟動 MQTT
+                    mqttManager.connect()
+                   
+                }
+                .onChange(of: mqttManager.isConnected) { newConnect in
+                    print("[入口] isConnected: \(newConnect)")
+                    // 連線MQTT
+                    if newConnect {
+                        // MARK: token 傳到後端儲存
+                        mqttManager.setDeviceToken(deviceToken: DeviceToken)
+                    }
                 }
         }
     }
@@ -91,6 +103,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
             if granted {
+                print("✅ 使用者同意推播")
+                //MARK: -  向 APNs 註冊
                 DispatchQueue.main.async {
                     UIApplication.shared.registerForRemoteNotifications()
                 }
@@ -101,23 +115,36 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         return true
     }
     
-    // MARK:  設置徽章數量並獲取 Device Token
+    // MARK: - 成功註冊推播 & 設置徽章數量，取得 device token
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         // 將 token 傳送至伺服器
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        let tokenParts = deviceToken.map { String(format: "%02.2hhx", $0) }
+        let token = tokenParts.joined()
         DeviceToken = token
-        print("Device Token: \(token)")
+        print("📱 Device Token: \(token)")
         
+//        MQTTManagerMiddle.shared.setDeviceToken(deviceToken: DeviceToken)
+
         // 設置初始徽章數為 0
         //application.applicationIconBadgeNumber = 0
     }
     
+    // 推播註冊失敗
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("❌ 無法註冊 APNs: \(error.localizedDescription)")
+    }
+
     // 接收到通知時更新徽章數
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let userInfo = response.notification.request.content.userInfo
+        print("✅ 前景收到推播資料: \(userInfo)")
+
         // 設置徽章數量
         UIApplication.shared.applicationIconBadgeNumber = 1
+        
         completionHandler()
     }
     

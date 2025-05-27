@@ -51,7 +51,7 @@ struct ContentView: View {
                         ElectricityTrackingView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay, forapp: self.$forapp, socketManager: socketManager)
                             .font(.system(size: 30, weight: .bold, design: .rounded))
                             .tabItem {
-                                Image(systemName: "house.fill")
+                                Image(systemName: "house.and.flag.fill")
                                 Text("日常用電追蹤")
                             }.badge(forapp.User_advice_bt) //勳章顯示相關功能
                             .tag(0)
@@ -59,7 +59,7 @@ struct ContentView: View {
                         HomeEnergyReportView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay, forapp: self.$forapp)
                             .font(.system(size: 30, weight: .bold, design: .rounded))
                             .tabItem {
-                                Image(systemName: "rectangle.3.group.bubble")
+                                Image(systemName: "exclamationmark.bubble")
                                 Text("家庭能源報告")
                             }.badge(forapp.Weekly_monthly_report_bth) //勳章顯示相關功能
                             .tag(1)
@@ -67,7 +67,7 @@ struct ContentView: View {
                         ElectricityManageView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay, forapp: self.$forapp)
                             .font(.system(size: 30, weight: .bold, design: .rounded))
                             .tabItem {
-                                Image(systemName: "bolt.circle.fill")
+                                Image(systemName: "bolt.horizontal.icloud.fill")
                                 Text("管理用電")
                             }.badge(forapp.Manage_control_advice_bth) //勳章顯示相關功能
                             .tag(2)
@@ -75,7 +75,7 @@ struct ContentView: View {
                         // MARK: - 智慧控制
                         Text("") // ⚠️ 這裡是假的 `Tab`，用來偵測點擊
                             .tabItem {
-                                Image(systemName: "bolt.horizontal.icloud.fill")
+                                Image(systemName: "house.badge.wifi.fill")
                                 Text("智慧控制")
                             }
                             .tag(3)

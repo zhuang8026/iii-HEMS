@@ -10,12 +10,12 @@ import SwiftUI
 /// 溫度控制視圖
 struct GradientProgress: View {
     @Binding var currentTemperature: Int // 初始溫度
-    @State private var temperature: Int = 16 // UI元件初始溫度
-    
-    private let minTemperature: Int = 16 // 最小溫度 default:16
-    private let maxTemperature: Int = 30 // 最大溫度 default:30
+    @Binding var minTemperature: Int  // 最小溫度
+    @Binding var maxTemperature: Int  // 最大溫度 
+
+    @State private var temperature: Int = 0 // UI元件初始溫度（動畫使用）
     @State private var lastHapticTime = Date() // 上次震動的時間
-    
+
     var body: some View {
         GeometryReader { geometry in
             let barWidth = geometry.size.width * 1.0 // 畫面寬度的 90%
@@ -57,6 +57,10 @@ struct GradientProgress: View {
             }
             .shadow(radius: 5)
             .onAppear {
+                currentTemperature = min(max(currentTemperature, minTemperature), maxTemperature)
+                temperature = currentTemperature
+            }
+            .onChange(of: currentTemperature) { newValue in
                 temperature = currentTemperature // 初始化時與 Binding 值同步
             }
             .gesture(
@@ -75,13 +79,16 @@ struct GradientProgress: View {
                                 lastHapticTime = now
                             }
                             
-                            temperature = min(maxTemperature, max(minTemperature, newTemperature))
+//                            temperature = min(maxTemperature, max(minTemperature, newTemperature))
+                            withAnimation(nil) {
+                                temperature = min(maxTemperature, max(minTemperature, newTemperature))
+                            }
                         }
                     }
                     .onEnded { _ in
                         // ✅ 只有在用戶停止拖動後才觸發 API 呼叫
                         currentTemperature = temperature // ✅ 結束時再更新
-                        print("溫度數據送出：\(currentTemperature)")
+//                        print("溫度數據送出：\(currentTemperature)")
                     }
             )
         }
@@ -107,15 +114,24 @@ struct GradientProgress: View {
     
     // 計算進度條的寬度
     private func progressWidth(for barWidth: CGFloat, totalSegments: Int) -> CGFloat {
+        guard totalSegments > 0 else { return 0 }
+        let rawProgress = CGFloat(temperature - minTemperature + 1)
+
         let adjustedSegments = totalSegments // 確保分為 15 段
-        let progress = CGFloat(temperature - minTemperature + 1) / CGFloat(adjustedSegments)
-        print("溫度:", progress)
-        return progress * barWidth
+        let progress = rawProgress / CGFloat(adjustedSegments)
+    
+        if !progress.isFinite || progress < 0 {
+            return 0
+        }
+
+//        return progress * barWidth
+        return max(0, min(progress * barWidth, barWidth))
     }
     
     /// 設置不同角的圓角半徑
     private func cornerRadius(for temperature: Int, corner: CornerType) -> CGFloat {
-        if temperature == 30 {
+        // 當"溫度 = 最大溫度"時，右上和右下就變成圓角
+        if temperature == self.maxTemperature {
             return 10 // 四個角都是20
         } else {
             switch corner {

@@ -58,11 +58,11 @@ struct EnvironmentalCardView: View {
             HStack(alignment: .center, spacing: 8) {
                 Image("co2") // CO₂ 圖示 (可換成自定義圖片)
                     .resizable()
-                    .scaledToFit() // 保持原比例，完整顯示
-                    .frame(width: 50, height: 50) // 設定寬度和高度
+                    .scaledToFit()
+
                 VStack(alignment: .leading, spacing: 0) {
                     Text("二氧化碳")
-                        .font(.system(size: 14))
+                       .font(.system(size: 14))
         
                     Text("\(co2)")
                         .font(.system(size: 30, weight: .bold))
@@ -79,10 +79,9 @@ struct EnvironmentalCardView: View {
 
             // 第二個卡片 (溫度)
             HStack(alignment: .center, spacing: 8) {
-                Image("normal-temperature") // 溫度 圖示 (可換成自定義圖片)
-                    .resizable()
-                    .scaledToFit() // 保持原比例，完整顯示
-                    .frame(width: 50, height: 50) // 設定寬度和高度
+                Image("normal-temperature") // CO₂ 圖示 (可換成自定義圖片)
+                        .resizable()
+                        .scaledToFit()
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("溫度")

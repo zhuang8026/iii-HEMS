@@ -9,7 +9,7 @@ import SwiftUI
 /// 底部導航欄
 struct NavigationBar: View {
     @Binding var selectedTab: String // 目前選中的標籤
-    @EnvironmentObject var mqttManager: MQTTManager // 取得 MQTTManager
+//    @EnvironmentObject var mqttManager: MQTTManager // 取得 MQTTManager
     
     // 家電類型對應的名稱
     private let deviceMapping: [String: String] = [
@@ -44,20 +44,20 @@ struct NavigationBar: View {
         .onAppear {
             updateSelectedTab() // 頁面出現時執行
         }
-        .onChange(of: mqttManager.availables) { _ in
+        .onChange(of: MQTTManagerMiddle.shared.availables) { _ in
             updateSelectedTab() // 當 MQTT 數據更新時執行
         }
     }
     
     /// 取得可用的標籤名稱（從 MQTTManager 解析）
     private func getAvailableTabs() -> [String] {
-        mqttManager.availables.compactMap { deviceMapping[$0] }
+//        mqttManager.availables.compactMap { deviceMapping[$0] }
+        return ["溫濕度", "空調", "除濕機", "遙控器", "插座"]
     }
     /// 當 availables 更新時，確保 selectedTab 有正確的值
     private func updateSelectedTab() {
         if selectedTab.isEmpty, let firstAvailable = getAvailableTabs().first {
             selectedTab = firstAvailable
-            print("")
         }
     }
     /// 取得對應的 SF Symbols 圖示

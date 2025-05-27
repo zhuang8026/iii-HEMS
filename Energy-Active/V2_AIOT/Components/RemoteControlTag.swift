@@ -9,7 +9,6 @@ import SwiftUI
 
 struct RemoteControlTag: View {
     @Binding var selectedTab: String // 標題名稱
-//    @State private var isBouncing = false
 //    @Binding var isPowerOn: Bool // 開關控制（父控制）
     
     @State private var modes = ["cool", "heat", "dry", "fan", "auto"]
@@ -35,18 +34,6 @@ struct RemoteControlTag: View {
                             Image(systemName: getTabIcon(for: tab))
                                 .font(.system(size: 24))
                                 .frame(width: 30, height: 30, alignment: .center)
-//                                .offset(y: isBouncing ? -5 : 0)
-//                                .animation(
-//                                    Animation.easeInOut(duration: 0.3)
-//                                        .repeatForever(autoreverses: true),
-//                                    value: isBouncing
-//                                )
-//                                .onAppear {
-//                                    isBouncing = true
-//                                }
-//                            Image(systemName: getTabIcon(for: tab))
-//                                .font(.system(size: 24))
-//                                .frame(width: 30, height: 30, alignment: .center)
 //                                .symbolEffect(.bounce.down.byLayer, options: .nonRepeating)
                         } else {
                             Image(systemName: getTabIcon(for: tab))
@@ -61,7 +48,7 @@ struct RemoteControlTag: View {
                     .foregroundColor(tab == selectedTab ? .g_blue : Color.gray)
                     .frame(maxWidth: .infinity, maxHeight: 80) // 確保每個 VStack 寬度相等
                     .background(tab == selectedTab ? Color.white : Color.light_gray.opacity(0.7))
-//                    .shadow( color: tab == selectedTab ? Color.black.opacity(0.3) : Color.clear, radius: 5, x: 0, y: 0) // ✅ 添加陰影
+                    .shadow( color: tab == selectedTab ? Color.black.opacity(0.3) : Color.clear, radius: 5, x: 0, y: 0) // ✅ 添加陰影
                     .onTapGesture {
                         selectedTab = tab // 更新 selectedTab
                         triggerHapticFeedback() // 觸發震動

@@ -110,7 +110,7 @@ class ScannerViewController: UIViewController {
     private func addCloseButton() {
         let config = UIImage.SymbolConfiguration(pointSize: 14, weight: .medium)
         let xmarkImage = UIImage(systemName: "xmark", withConfiguration: config)?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        
+
         closeButton.setImage(xmarkImage, for: .normal)
         closeButton.setTitle(" 關閉", for: .normal) // 前面加空格讓圖跟字分開
         closeButton.setTitleColor(.white, for: .normal)

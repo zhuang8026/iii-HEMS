@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CircularProgressBar: View {
+    @Binding var progress: Double // 0.0 到 1.0 的值    
     @State private var animatedProgress: Double = 0.0 // 用於動畫的 progress
-    
-    var progress: Double // 0.0 到 1.0 的值
+
     let crcleWidth: Int = 30
     // 外圓的大小，動態計算
     var outSize: CGFloat {

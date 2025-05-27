@@ -40,3 +40,13 @@ let GreenCustomizeColor = Color(red: 40.0 / 255.0, green: 180.0 / 255.0, blue: 1
 let GreyCustomizeColor = Color(red: 241.0 / 255.0, green: 243.0 / 255.0, blue: 252.0 / 255.0)
 let NavyBlueCustomizeColor = Color(red: 50.0 / 255.0, green: 53.0 / 255.0, blue: 98.0 / 255.0)
 let DarkGrayCustomizeColor = Color(red: 61.0 / 255.0, green: 102.0 / 255.0, blue: 143.0 / 255.0)
+
+// API MOCK
+var apiMock: Bool = false // API mock default: 關閉
+
+// version
+// 說明：v主版本號.次版本號.修訂號
+// 主版本號（v2.0.0）：重構整個架構、重大功能變動等
+// 次版本號（v0.3.0）：新增模組、介面功能等
+// 修訂號（v0.0.1）：錯誤修正
+var version: String = "v2.3.1-beta" // beta測試/alpha開發中/rc候選
