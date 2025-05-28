@@ -677,7 +677,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Energy-Active/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
+				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(智慧行動版)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "我們需要使用您的相機來掃描 Wi-Fi QR Code";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "此應用程式需要存取本地網路以連接 Wi-Fi";
@@ -695,7 +695,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "William.ios.energy-active";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuangchiehhan.smartenergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -723,7 +723,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Energy-Active/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(行動版)";
+				INFOPLIST_KEY_CFBundleDisplayName = "居家能源管理服務(智慧行動版)";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSCameraUsageDescription = "我們需要使用您的相機來掃描 Wi-Fi QR Code";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "此應用程式需要存取本地網路以連接 Wi-Fi";
@@ -741,7 +741,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.3;
-				PRODUCT_BUNDLE_IDENTIFIER = "William.ios.energy-active";
+				PRODUCT_BUNDLE_IDENTIFIER = com.chuangchiehhan.smartenergy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
