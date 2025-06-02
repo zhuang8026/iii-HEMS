@@ -46,12 +46,6 @@
 		<string>NotoSansTC-Light.otf</string>
 		<string>NotoSansTC-Thin.otf</string>
 	</array>
-	<!-- <key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-		<string>bluetooth-peripheral</string>
-		<string>remote-notification</string>
-	</array> -->
 	<key>com.apple.developer.networking.HotspotConfiguration</key>
 	<true/>
 </dict>
