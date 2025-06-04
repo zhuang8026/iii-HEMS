@@ -17,7 +17,7 @@ struct AIOTView: View {
     
     @State private var selectedTab = "" // 選擇設備控制
     @State private var status = false // 控制顯示標題名稱（內含 返回 icon）
-    @State private var enterBinding = false // 關閉 設備未連線 or 主畫面
+    @State private var enterBinding = false // 強制進入綁定畫面
     @State private var isShowingSmartControl = false // [pop-up] 是否要開始 智慧環控連線 頁面，默認：關閉
     @State private var isSmartControlConnected = false // [status] 連線狀態，默認：API GET 告知
     
@@ -125,7 +125,7 @@ struct AIOTView: View {
             return true
         } else {
             let isBinding: Bool = deviceBindingForTab(tab: tab) // 已綁定設備資料
-            let isUpdated: Bool = isDeviceUpdatedOnline(tab: tab) // 已綁定設備 資料更新時間
+            let isUpdated: Bool = isDeviceUpdatedOnline(tab: tab) // 已綁定設備 資料更新時間 (<= 30 min)
             
             print("\(tab) 是否已經綁定 -> \(isBinding)")
             print("\(tab) 更新資料是否在30min之內 -> \(isUpdated)")
