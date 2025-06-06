@@ -20,6 +20,8 @@ struct ContentView: View {
     @State private var selectedTab = 0
     @State private var showAIOTFullScreen = false // 智慧控制全螢幕控制（默認：關閉）
     
+    @StateObject private var mqttManager = MQTTManagerMiddle.shared
+
     @EnvironmentObject var electricityElectricityTrackingAlertManager : ElectricityTrackingAlertManager
     @EnvironmentObject var electricityModifyElectricityTargetAlertManager : ModifyElectricityTargetAlertManager
     
@@ -114,7 +116,7 @@ struct ContentView: View {
                                 }
                             }
                     }
-                    
+
                     // MARK: - AI機器人
                     if (robotIconDisplay) {
                         // MARK: 在右下角添加一個固定的黃色按鈕
@@ -139,8 +141,6 @@ struct ContentView: View {
                         }.ignoresSafeArea(.keyboard, edges: .bottom) // 禁用自動避開鍵盤
                     }
                 }
-                
-                
                 // MARK: - 設定用電目標額度提示視窗
                 .electricityModifyElectricityTargetAlertView(
                     showAlert: $electricityModifyElectricityTargetAlertManager.showAlert,
@@ -148,7 +148,6 @@ struct ContentView: View {
                     mouthKwh: $electricityModifyElectricityTargetAlertManager.mouthKwh,
                     useTargetRatio: $electricityModifyElectricityTargetAlertManager.useTargetRatio
                 )
-                
                 // MARK: - 警告視窗
                 .electricityWarningCustomAlertView(
                     showAlert: $electricityElectricityTrackingAlertManager.showWarningCustomAlert,

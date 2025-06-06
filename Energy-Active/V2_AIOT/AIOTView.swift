@@ -342,14 +342,20 @@ struct AIOTView: View {
                     mqttManager.disconnect() // 離開畫面 斷開 MQTT 連線
                 }
                 .onChange(of: mqttManager.isConnected) { newConnect in
-                    print("[入口] isConnected: /(newConnect)")
+                    print("[入口] isConnected: \(newConnect)")
                     // 連線MQTT
                     if newConnect {
+                        // MARK: - token 傳到後端儲存
+                        mqttManager.setDeviceToken(deviceToken: DeviceToken)
                         //  mqttManager.publishApplianceUserLogin(username: "app", password: "app:ppa")
                         //  MQTTManagerMiddle.shared.login(username: "user", password: "app:ppa")
                         //  mqttManager.publishTelemetryCommand(subscribe: true)
+
+                        // MARK: - 接收家電資訊指令
                         mqttManager.startTelemetry() // 接收家電資訊指令
                         //  mqttManager.publishCapabilities()
+
+                        // MARK: -查詢 家電參數讀寫能力 指令
                         mqttManager.requestCapabilities() // 查詢 家電參數讀寫能力 指令
                     }
                 }

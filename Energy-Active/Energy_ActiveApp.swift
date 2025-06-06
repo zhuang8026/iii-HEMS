@@ -77,17 +77,16 @@ struct Energy_ActiveApp: App {
                     // UIApplication.shared.applicationIconBadgeNumber = 0
                     
                     // MARK: 啟動 MQTT
-                    mqttManager.connect()
-                   
+//                    mqttManager.connect()
                 }
-                .onChange(of: mqttManager.isConnected) { newConnect in
-                    print("[入口] isConnected: \(newConnect)")
-                    // 連線MQTT
-                    if newConnect {
-                        // MARK: token 傳到後端儲存
-                        mqttManager.setDeviceToken(deviceToken: DeviceToken)
-                    }
-                }
+//                .onChange(of: mqttManager.isConnected) { newConnect in
+//                    print("[入口] isConnected: \(newConnect)")
+//                    // 連線MQTT
+//                    if newConnect {
+//                        // MARK: token 傳到後端儲存
+//                        mqttManager.setDeviceToken(deviceToken: DeviceToken)
+//                    }
+//                }
         }
     }
     

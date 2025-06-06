@@ -384,7 +384,7 @@ extension MQTTManagerMiddle: CocoaMQTTDelegate {
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didStateChangeTo state: CocoaMQTTConnState) {
-        print("\(state == .connected ? "✅" : "⚠️") MQTT 狀態變更: \(state)")
+        print("\(state == .connected ? "✅" : "⚠️") MQTT 狀態變更: \(state)") // 注意: .connected 並不代表 broker 已經接受 client
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
