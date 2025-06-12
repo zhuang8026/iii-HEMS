@@ -11,9 +11,6 @@
 		30A2C90A6907EC72341F8FA7 /* Pods_Energy_ActiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBD74EB301B39554351BD56 /* Pods_Energy_ActiveTests.framework */; };
 		4CC0CC5D435FAE12648072CD /* Pods_Energy_Active.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6584A405E4A1C94BA71A5B0E /* Pods_Energy_Active.framework */; };
 		4EBC81B92DE551E8009BC447 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC81B82DE551E8009BC447 /* Config.swift */; };
-		A940FCE92A0C846B00C50E57 /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */; };
-		A96BE94F2BE9BC3300CD314C /* ElectricityManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */; };
-		A98376722A78E05600388D68 /* GraphicsAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98376712A78E05600388D68 /* GraphicsAlert.swift */; };
 		A98EB7FC29B5CF9E007FB3AD /* Energy_ActiveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */; };
 		A98EB7FE29B5CF9E007FB3AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */; };
 		A98EB80029B5CFA0007FB3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98EB7FF29B5CFA0007FB3AD /* Assets.xcassets */; };
@@ -21,24 +18,7 @@
 		A98EB80D29B5CFA0007FB3AD /* Energy_ActiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB80C29B5CFA0007FB3AD /* Energy_ActiveTests.swift */; };
 		A98EB81729B5CFA0007FB3AD /* Energy_ActiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB81629B5CFA0007FB3AD /* Energy_ActiveUITests.swift */; };
 		A98EB81929B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB81829B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift */; };
-		A98EB82A29B5D25B007FB3AD /* ElectricityTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */; };
-		A98EB82C29B5D7E1007FB3AD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB82B29B5D7E1007FB3AD /* LoginView.swift */; };
-		A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */; };
 		A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */; };
-		A98EB83829B5DBAC007FB3AD /* CustomerServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */; };
-		A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */; };
-		A99CF5CD2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */; };
-		A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */; };
-		A9A4D5D52BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */; };
-		A9A4D5D72BF3483100DB0A02 /* SchedulePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */; };
-		A9A4D5D92BF449FC00DB0A02 /* CreateReviseScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */; };
-		A9A4D5DB2BF71A1A00DB0A02 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */; };
-		A9BB780E2A08E7CD0087DE30 /* BindAppliancesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */; };
-		A9F452532A0CE3DC00123E55 /* WarningCustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */; };
-		A9F452552A0CE5F400123E55 /* ApplianceUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */; };
-		A9F452572A0CE65300123E55 /* ModifyElectricityTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */; };
-		A9F452592A17621A00123E55 /* Weekly_MsgAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */; };
-		A9F4525B2A176E6400123E55 /* ContinuousLoginAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */; };
 		A9F4525D2A1F348100123E55 /* ElectricityTrackingWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */; };
 		A9F452672A299DEA00123E55 /* NotoSansTC-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452612A299DE900123E55 /* NotoSansTC-Light.otf */; };
 		A9F452682A299DEA00123E55 /* NotoSansTC-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9F452622A299DE900123E55 /* NotoSansTC-Thin.otf */; };
@@ -74,9 +54,6 @@
 		A90450352A3AFC8F0061C974 /* Energy-Active.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Energy-Active.entitlements"; sourceTree = "<group>"; };
 		A915D97029CD57B000D94BDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A93CBEE1649B72B48B26EB6D /* Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig"; path = "Target Support Files/Pods-Energy-Active-Energy-ActiveUITests/Pods-Energy-Active-Energy-ActiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
-		A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityManageView.swift; sourceTree = "<group>"; };
-		A98376712A78E05600388D68 /* GraphicsAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsAlert.swift; sourceTree = "<group>"; };
 		A98EB7F829B5CF9E007FB3AD /* Energy-Active.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Energy-Active.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveApp.swift; sourceTree = "<group>"; };
 		A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,24 +64,7 @@
 		A98EB81229B5CFA0007FB3AD /* Energy-ActiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Energy-ActiveUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A98EB81629B5CFA0007FB3AD /* Energy_ActiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveUITests.swift; sourceTree = "<group>"; };
 		A98EB81829B5CFA0007FB3AD /* Energy_ActiveUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Energy_ActiveUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityTrackingView.swift; sourceTree = "<group>"; };
-		A98EB82B29B5D7E1007FB3AD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEnergyReportView.swift; sourceTree = "<group>"; };
 		A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityManageWebUIView.swift; sourceTree = "<group>"; };
-		A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerServiceView.swift; sourceTree = "<group>"; };
-		A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Electricity_MsgAlert.swift; sourceTree = "<group>"; };
-		A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleDeviceUIView.swift; sourceTree = "<group>"; };
-		A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityScheduleView.swift; sourceTree = "<group>"; };
-		A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHistoryPageView.swift; sourceTree = "<group>"; };
-		A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePageView.swift; sourceTree = "<group>"; };
-		A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateReviseScheduleView.swift; sourceTree = "<group>"; };
-		A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
-		A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindAppliancesView.swift; sourceTree = "<group>"; };
-		A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningCustomAlert.swift; sourceTree = "<group>"; };
-		A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplianceUIView.swift; sourceTree = "<group>"; };
-		A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyElectricityTargetView.swift; sourceTree = "<group>"; };
-		A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weekly_MsgAlert.swift; sourceTree = "<group>"; };
-		A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuousLoginAlert.swift; sourceTree = "<group>"; };
 		A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricityTrackingWebView.swift; sourceTree = "<group>"; };
 		A9F452612A299DE900123E55 /* NotoSansTC-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Light.otf"; sourceTree = "<group>"; };
 		A9F452622A299DE900123E55 /* NotoSansTC-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Thin.otf"; sourceTree = "<group>"; };
@@ -119,8 +79,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4E1360682DA7BF6600CD275A /* V2_ChatAI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = V2_ChatAI; sourceTree = "<group>"; };
-		4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = V2_AIOT; sourceTree = "<group>"; };
+		4EF5F34B2DF689A700E166BF /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
+		4EF5F34C2DF689E000E166BF /* Subpage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Subpage; sourceTree = "<group>"; };
+		4EF5F34D2DF691E800E166BF /* Mainpage */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Mainpage; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,35 +147,16 @@
 		A98EB7FA29B5CF9E007FB3AD /* Energy-Active */ = {
 			isa = PBXGroup;
 			children = (
-				4E1360682DA7BF6600CD275A /* V2_ChatAI */,
-				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
+				4EF5F34D2DF691E800E166BF /* Mainpage */,
+				4EF5F34C2DF689E000E166BF /* Subpage */,
+				4EF5F34B2DF689A700E166BF /* Components */,
 				A90450352A3AFC8F0061C974 /* Energy-Active.entitlements */,
 				A915D97029CD57B000D94BDE /* Info.plist */,
 				4EBC81B82DE551E8009BC447 /* Config.swift */,
-				A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */,
 				A98EB7FD29B5CF9E007FB3AD /* ContentView.swift */,
-				A98EB82B29B5D7E1007FB3AD /* LoginView.swift */,
-				A98EB82929B5D25B007FB3AD /* ElectricityTrackingView.swift */,
-				A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */,
-				A9F452542A0CE5F400123E55 /* ApplianceUIView.swift */,
-				A9F452562A0CE65300123E55 /* ModifyElectricityTargetView.swift */,
-				A9F4525A2A176E6400123E55 /* ContinuousLoginAlert.swift */,
-				A9F452522A0CE3DC00123E55 /* WarningCustomAlert.swift */,
-				A98376712A78E05600388D68 /* GraphicsAlert.swift */,
-				A9F452582A17621A00123E55 /* Weekly_MsgAlert.swift */,
-				A98EB83329B5DB82007FB3AD /* HomeEnergyReportView.swift */,
-				A96BE94E2BE9BC3300CD314C /* ElectricityManageView.swift */,
-				A99CF5CA2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift */,
-				A99CF5CC2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift */,
-				A99CF5CE2BEE13E400DDE2F5 /* ElectricityScheduleView.swift */,
-				A9A4D5D62BF3483100DB0A02 /* SchedulePageView.swift */,
-				A9A4D5D42BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift */,
-				A9A4D5D82BF449FC00DB0A02 /* CreateReviseScheduleView.swift */,
-				A9A4D5DA2BF71A1A00DB0A02 /* CustomAlertView.swift */,
+				A98EB7FB29B5CF9E007FB3AD /* Energy_ActiveApp.swift */,
 				A98EB83529B5DB97007FB3AD /* ElectricityManageWebUIView.swift */,
-				A98EB83729B5DBAC007FB3AD /* CustomerServiceView.swift */,
-				A9BB780D2A08E7CD0087DE30 /* BindAppliancesView.swift */,
-				A940FCE82A0C846B00C50E57 /* CustomProgressView.swift */,
+				A9F4525C2A1F348100123E55 /* ElectricityTrackingWebView.swift */,
 				A9F452602A299CDA00123E55 /* Fonts */,
 				A98EB7FF29B5CFA0007FB3AD /* Assets.xcassets */,
 				A98EB80129B5CFA0007FB3AD /* Preview Content */,
@@ -290,8 +232,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				4E1360682DA7BF6600CD275A /* V2_ChatAI */,
-				4EEA127E2D9A8C1F0079FB20 /* V2_AIOT */,
+				4EF5F34B2DF689A700E166BF /* Components */,
+				4EF5F34C2DF689E000E166BF /* Subpage */,
+				4EF5F34D2DF691E800E166BF /* Mainpage */,
 			);
 			name = "Energy-Active";
 			productName = "Energy-Active";
@@ -485,31 +428,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9A4D5DB2BF71A1A00DB0A02 /* CustomAlertView.swift in Sources */,
-				A9F452532A0CE3DC00123E55 /* WarningCustomAlert.swift in Sources */,
-				A96BE94F2BE9BC3300CD314C /* ElectricityManageView.swift in Sources */,
-				A98EB83429B5DB83007FB3AD /* HomeEnergyReportView.swift in Sources */,
-				A9A4D5D92BF449FC00DB0A02 /* CreateReviseScheduleView.swift in Sources */,
 				A98EB83629B5DB97007FB3AD /* ElectricityManageWebUIView.swift in Sources */,
-				A9BB780E2A08E7CD0087DE30 /* BindAppliancesView.swift in Sources */,
-				A9A4D5D52BF1F77C00DB0A02 /* ScheduleHistoryPageView.swift in Sources */,
-				A940FCE92A0C846B00C50E57 /* CustomProgressView.swift in Sources */,
-				A98EB82A29B5D25B007FB3AD /* ElectricityTrackingView.swift in Sources */,
-				A98376722A78E05600388D68 /* GraphicsAlert.swift in Sources */,
 				A98EB7FE29B5CF9E007FB3AD /* ContentView.swift in Sources */,
 				4EBC81B92DE551E8009BC447 /* Config.swift in Sources */,
-				A98EB82C29B5D7E1007FB3AD /* LoginView.swift in Sources */,
 				A9F4525D2A1F348100123E55 /* ElectricityTrackingWebView.swift in Sources */,
-				A9A4D5D72BF3483100DB0A02 /* SchedulePageView.swift in Sources */,
-				A99CF5CD2BEB728200DDE2F5 /* ScheduleDeviceUIView.swift in Sources */,
-				A98EB83829B5DBAC007FB3AD /* CustomerServiceView.swift in Sources */,
 				A98EB7FC29B5CF9E007FB3AD /* Energy_ActiveApp.swift in Sources */,
-				A9F452552A0CE5F400123E55 /* ApplianceUIView.swift in Sources */,
-				A9F4525B2A176E6400123E55 /* ContinuousLoginAlert.swift in Sources */,
-				A99CF5CF2BEE13E400DDE2F5 /* ElectricityScheduleView.swift in Sources */,
-				A9F452592A17621A00123E55 /* Weekly_MsgAlert.swift in Sources */,
-				A9F452572A0CE65300123E55 /* ModifyElectricityTargetView.swift in Sources */,
-				A99CF5CB2BEB720A00DDE2F5 /* Electricity_MsgAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

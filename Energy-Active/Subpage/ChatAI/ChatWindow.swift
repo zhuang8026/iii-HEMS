@@ -4,7 +4,7 @@ import SocketIO
 //protocol AppSocketManagerDelegate {
 //    func socketEmit(command: String)
 //    func socketEmit(command: String, data: [String: Any])
-//    
+//
 //}
 
 //struct ChatView: View , ChatWindowDelegate {
@@ -12,16 +12,16 @@ import SocketIO
 struct ChatView: View, ChatWindowDelegate {
     @Environment(\.dismiss) var dismiss  // 獲取 dismiss 環境變數
     @State private var networkMonitor = NetworkMonitor() // 監控網路狀態（ex: 斷線）
-
+    
     @State private var GLOBAL_MESSAGES: [Message] = [
-//        Message(content: "用戶輸入內容", isSentByUser: false, time: "12:30"),
+        //        Message(content: "用戶輸入內容", isSentByUser: false, time: "12:30"),
     ] // 全域聊天室 內容
     
     @State private var SEARCH_INFO: [Message] = [] // 用電查詢 內容
     @State private var FAQ_INFO: [Message] = [] // FAQ 訊息
     @State private var FAQ_List: [FAQList] = [] // FAQ 客製化問題
     @State private var WARNING_INFO: [Message] = [] // 異常用電 訊息
-
+    
     @State var userID: String = CurrentUserID //  用戶輸入框控制
     @State private var messageText: String = "" // 用戶輸入框控制
     @State private var inquiryID: String = "" // token唯一碼
@@ -33,7 +33,7 @@ struct ChatView: View, ChatWindowDelegate {
     @State private var ActiveBtnName: String = "SEARCH" // 用電查詢是否被點擊
     
     @ObservedObject var socketManager : AppSocketManager
-        
+    
     var body: some View {
         ZStack(alignment: .top) {
             // Header
@@ -72,7 +72,7 @@ struct ChatView: View, ChatWindowDelegate {
             .padding(.top, 10) // 設置左右內邊距為 10 點
             .padding(.horizontal, 10) // 設置左右內邊距為 10 點
             .alignmentGuide(.top) { _ in 0 } // 確保向上對齊
-//            .position(x: UIScreen.main.bounds.width / 2, y: 40) // 固定在頂部
+            //            .position(x: UIScreen.main.bounds.width / 2, y: 40) // 固定在頂部
             
             // body
             VStack {
@@ -87,7 +87,7 @@ struct ChatView: View, ChatWindowDelegate {
                     }
                 } else {
                     let messageList =  self.ActiveBtnName == "SEARCH" ? self.SEARCH_INFO :
-                                        (self.ActiveBtnName == "FAQ" ? self.FAQ_INFO : self.WARNING_INFO)
+                    (self.ActiveBtnName == "FAQ" ? self.FAQ_INFO : self.WARNING_INFO)
                     if messageList.isEmpty {
                         // messageList 為空
                         VStack {
@@ -103,23 +103,23 @@ struct ChatView: View, ChatWindowDelegate {
                             ScrollView {
                                 VStack (alignment: .leading, spacing: 12) {
                                     ForEach(messageList.indices, id: \.self) { index in
-                                            let message = messageList[index]
-                                            let showDate = index == 0 || messageList[index - 1].date != message.date
+                                        let message = messageList[index]
+                                        let showDate = index == 0 || messageList[index - 1].date != message.date
                                         
-                                            if showDate {
-                                                Text(message.date)
-                                                    .font(.caption)
-                                                    .foregroundColor(.gray)
-                                                    .padding(.bottom, 5)
-                                                    .frame(maxWidth: .infinity)
-                                                    .multilineTextAlignment(.center)
-                                            }
-    
-                                            ChatBubble( message: message.content, isSentByUser: message.isSentByUser,
-                                                        time: message.time, status: message.status ).id(message.id) // 設定每個訊息的ID
+                                        if showDate {
+                                            Text(message.date)
+                                                .font(.caption)
+                                                .foregroundColor(.gray)
+                                                .padding(.bottom, 5)
+                                                .frame(maxWidth: .infinity)
+                                                .multilineTextAlignment(.center)
                                         }
-                                        .padding(.top, 5)
-                                        .padding(.horizontal, 10) // 在外部容器中設置左右內邊距
+                                        
+                                        ChatBubble( message: message.content, isSentByUser: message.isSentByUser,
+                                                    time: message.time, status: message.status ).id(message.id) // 設定每個訊息的ID
+                                    }
+                                    .padding(.top, 5)
+                                    .padding(.horizontal, 10) // 在外部容器中設置左右內邊距
                                     
                                     if self.isLoading {
                                         ChatLoading().id("chat_loading") // 為 ChatLoading 設置一個 ID
@@ -128,9 +128,9 @@ struct ChatView: View, ChatWindowDelegate {
                                         ChatLoading().id("search_loading") // 為 ChatLoading 設置一個 ID
                                     }
                                     Rectangle() // Or any other shape like Circle()
-                                       .frame(width: 1, height: 1)
-                                       .background(Color.clear)
-                                       .id("chat_bottom")
+                                        .frame(width: 1, height: 1)
+                                        .background(Color.clear)
+                                        .id("chat_bottom")
                                 }
                                 // [進入畫面觸發] 當視圖顯示時立即滾動到最後一個訊息
                                 .onAppear {
@@ -138,7 +138,7 @@ struct ChatView: View, ChatWindowDelegate {
                                     if let lastMessage = messageList.last {
                                         proxy.scrollTo(lastMessage.id, anchor: .bottom)
                                     }
-//                                    proxy.scrollTo("chat_bottom", anchor: .bottom)
+                                    //                                    proxy.scrollTo("chat_bottom", anchor: .bottom)
                                     // 啟動網絡監控
                                     networkMonitor.startMonitoring()
                                 }
@@ -169,7 +169,7 @@ struct ChatView: View, ChatWindowDelegate {
                                         proxy.scrollTo("search_loading", anchor: .bottom)
                                     }
                                 }
-
+                                
                             }
                             .onTapGesture {
                                 isInputFieldFocused = false // 點擊聊天區域時，聚焦輸入框
@@ -179,16 +179,16 @@ struct ChatView: View, ChatWindowDelegate {
                         .padding(.bottom, 0) // 預留空間給 Header
                     }
                 }
-
-//                Spacer()
-
+                
+                //                Spacer()
+                
                 // Buttons & send message
                 VStack(spacing: 0) {  // pacing: 0 -> 确保间距为 0
-//                    let buttonTitles = [
-//                        ButtonData(name: "帳密相關", value: "members_setting", prompt:"我想詢問帳密相關問題"),
-//                        ButtonData(name: "系統服務", value: "device_setting", prompt: "我想詢問系統服務相關的問題"),
-//                        ButtonData(name: "設備相關", value: "monthly_report", prompt: "我想詢問智慧設備相關問題")
-//                    ]
+                    //                    let buttonTitles = [
+                    //                        ButtonData(name: "帳密相關", value: "members_setting", prompt:"我想詢問帳密相關問題"),
+                    //                        ButtonData(name: "系統服務", value: "device_setting", prompt: "我想詢問系統服務相關的問題"),
+                    //                        ButtonData(name: "設備相關", value: "monthly_report", prompt: "我想詢問智慧設備相關問題")
+                    //                    ]
                     // FAQ 快速查詢
                     if  self.ActiveBtnName == "FAQ" {
                         HStack {
@@ -208,15 +208,15 @@ struct ChatView: View, ChatWindowDelegate {
                                             RoundedRectangle(cornerRadius: 20.0) // 与背景的圆角一致
                                                 .stroke(Color.PrimaryColor, lineWidth: 1) // 设置边框颜色和宽度
                                         )
-//                                        .shadow(color: .gray, radius: 2, x: 0, y: 2) // 添加阴影
+                                    //                                        .shadow(color: .gray, radius: 2, x: 0, y: 2) // 添加阴影
                                 }
                             }
-
+                            
                         }
                         .padding(.bottom, 5)  // 設置上下邊距為5點
                         .padding(.horizontal, 10)  // 設置左右邊距為10點
                     }
-
+                    
                     // Buttons
                     HStack {
                         // 用電查詢 按鈕
@@ -237,12 +237,12 @@ struct ChatView: View, ChatWindowDelegate {
                         .padding(.bottom, 0) // 下邊距 0 點
                         .frame( height: 40.0)
                         .background(self.ActiveBtnName == "SEARCH" ? AnyView(activeBtn) : AnyView(inactiveBtn))
-//                        .foregroundColor(Color(white: 1.0))
+                        //                        .foregroundColor(Color(white: 1.0))
                         .foregroundColor(self.ActiveBtnName == "SEARCH" ? .white : Color.PrimaryColor)
                         .cornerRadius(20.0)
                         .disabled(self.ActiveBtnName == "SEARCH")
                         .disabled(self.isLoading)
-
+                        
                         // FAQ 按鈕
                         Button(action: {
                             // 這裡定義按鈕被點擊後要執行的動作
@@ -295,7 +295,7 @@ struct ChatView: View, ChatWindowDelegate {
                     .padding(.top, 10) // 下邊距 0 點
                     .padding(.bottom, 0) // 下邊距 0 點
                     .background(Color(red: 250.0 / 255.0, green: 250.0 / 255.0, blue: 1.0))
-
+                    
                     // send message
                     HStack {
                         // 輸入訊息框
@@ -307,12 +307,12 @@ struct ChatView: View, ChatWindowDelegate {
                             .foregroundColor(Color.PrimaryColor) // 設置文字顏色為白色
                             .cornerRadius(30.0) // 圓角
                             .frame(minHeight: 50, maxHeight: .infinity) // 設置最小和最大高度
-                            // .frame(height: geometry.size.height) // 設置高度為 GeometryReader 計算的高度
+                        // .frame(height: geometry.size.height) // 設置高度為 GeometryReader 計算的高度
                             .onTapGesture {
                                 isInputFieldFocused = true // 點擊時聚焦
                             }
                             .fixedSize(horizontal: false, vertical: true) // 使 TextEditor 在垂直方向上自適應
-
+                        
                         // 發送訊息按鈕
                         Button(action: sendMessage) {
                             Image("send")
@@ -323,13 +323,13 @@ struct ChatView: View, ChatWindowDelegate {
                     }
                     .padding(10)
                     .background(Color(red: 250.0 / 255.0, green: 250.0 / 255.0, blue: 1.0))
-
+                    
                 }
                 .disabled(self.isLoading || self.isSearchLoading)
             }
         }
         .background(Color(red: 222/255, green: 235/255, blue: 234/255))
-//        .onAppear(perform: setupSocket)
+        //        .onAppear(perform: setupSocket)
         .onAppear
         {
             socketManager.chatWindowDelegate = self
@@ -339,16 +339,16 @@ struct ChatView: View, ChatWindowDelegate {
                 //print("chatWindowDelegate is not set.")
             } else {
                 //print("chatWindowDelegate is set.")
-                                        
+                
                 self.postAbnormalSendUserID()   //異常狀態偵測
                 
                 if socketManager.robotExceptionIcon == true
                 {
                     // 發生異常，可取正常token
                     print("[異常偵測] 偵測成功: 異常推播存在！")
-//                    self.inquiryID = inquiryID
-//                    self.postHistoryMessage()
-//                    self.ActiveBtnName = "WARNING"
+                    //                    self.inquiryID = inquiryID
+                    //                    self.postHistoryMessage()
+                    //                    self.ActiveBtnName = "WARNING"
                     self.isTransitionsLoading = true // [開始] 加載聊天室內容
                     self.ActiveBtnName = "WARNING" // 切換 WARNING
                 }
@@ -361,10 +361,10 @@ struct ChatView: View, ChatWindowDelegate {
                 }
             }
             
-//            //MARK: 進入chat windows 設置徽章為 0
-//            UIApplication.shared.applicationIconBadgeNumber = 0
+            //            //MARK: 進入chat windows 設置徽章為 0
+            //            UIApplication.shared.applicationIconBadgeNumber = 0
         }
-        .onDisappear 
+        .onDisappear
         {
             //MARK:  當 View 關閉時，移除委派
             socketManager.chatWindowDelegate = nil
@@ -392,12 +392,12 @@ struct ChatView: View, ChatWindowDelegate {
     // MARK: [用電查詢] 取得用戶token
     private func postSendUserID() {
         let data: [String: Any] = ["user_id": userID]
-//        socket.emit("/power_inquiry/status", data)
-//        appSocketManagerDelegate?.socketEmit(command: "/power_inquiry/status", data: data)
+        //        socket.emit("/power_inquiry/status", data)
+        //        appSocketManagerDelegate?.socketEmit(command: "/power_inquiry/status", data: data)
         socketManager.socketEmit(command: "/power_inquiry/status", data: data)
         print("[用電查詢] 取得用戶token！")
     }
-
+    
     // MARK: [用電查詢] 用戶歷史資料
     private func postHistoryMessage() {
         let data: [String: Any] = [
@@ -405,8 +405,8 @@ struct ChatView: View, ChatWindowDelegate {
             "inquiry_id": self.inquiryID,
         ]
         print("[用戶歷史資料]用戶資料送出: \(data)")
-//        socket.emit("/history_message", data)
-//        appSocketManagerDelegate?.socketEmit(command: "/history_message", data: data)
+        //        socket.emit("/history_message", data)
+        //        appSocketManagerDelegate?.socketEmit(command: "/history_message", data: data)
         socketManager.socketEmit(command: "/history_message", data: data)
         // 打印 GLOBAL_MESSAGES 的內容
         print("[用電查詢] 取得歷史資料！")
@@ -422,7 +422,7 @@ struct ChatView: View, ChatWindowDelegate {
         
         // 創建一個新的訊息
         let newMessage = Message(content: self.messageText, isSentByUser: true, time: getCurrentTime(), date: getCurrentDate())
-
+        
         // 將新的訊息添加到陣列中
         if self.ActiveBtnName == "SEARCH" {
             self.SEARCH_INFO.append(newMessage)
@@ -433,7 +433,7 @@ struct ChatView: View, ChatWindowDelegate {
         if self.ActiveBtnName == "WARNING" {
             self.WARNING_INFO.append(newMessage)
         }
-
+        
         let data: [String: Any] = [
             "user_id": userID,
             "report_time": getCurrentFullTime(),
@@ -443,26 +443,26 @@ struct ChatView: View, ChatWindowDelegate {
         
         var emitKey:String = ""
         switch self.ActiveBtnName {
-            case "SEARCH":
-                // 用電查詢 URL
-                emitKey = "/power_inquiry/user_message"
-                print("[SEARCH] use -> '/power_inquiry/user_message'")
-            case "FAQ":
-                // FAQ URL
-                emitKey = "/faq/user_message"
-                print("[FAQ] use -> '/faq/user_message'")
-            case "WARNING":
-                // 用電查詢 URL
-                emitKey = "/abnormal/user_message"
-                print("[FAQ] use -> '/abnormal/user_message'")
-            default:
-                // 用電查詢 URL
-                emitKey = ""
-                print("WARNING, no use anything key")
+        case "SEARCH":
+            // 用電查詢 URL
+            emitKey = "/power_inquiry/user_message"
+            print("[SEARCH] use -> '/power_inquiry/user_message'")
+        case "FAQ":
+            // FAQ URL
+            emitKey = "/faq/user_message"
+            print("[FAQ] use -> '/faq/user_message'")
+        case "WARNING":
+            // 用電查詢 URL
+            emitKey = "/abnormal/user_message"
+            print("[FAQ] use -> '/abnormal/user_message'")
+        default:
+            // 用電查詢 URL
+            emitKey = ""
+            print("WARNING, no use anything key")
         }
         
-//        socket.emit(emitKey, data)
-//        appSocketManagerDelegate?.socketEmit(command: emitKey, data: data)
+        //        socket.emit(emitKey, data)
+        //        appSocketManagerDelegate?.socketEmit(command: emitKey, data: data)
         socketManager.socketEmit(command: emitKey, data: data)
         
         // 清空輸入框
@@ -475,34 +475,34 @@ struct ChatView: View, ChatWindowDelegate {
     // -----------> [FAQ] <-----------
     // [FAQ] 開始取得FAQ問題項目
     private func getFAQList() {
-//        socket.emit("/faq/que")
-//        appSocketManagerDelegate?.socketEmit(command: "/faq/que")
+        //        socket.emit("/faq/que")
+        //        appSocketManagerDelegate?.socketEmit(command: "/faq/que")
         socketManager.socketEmit(command: "/faq/que")
         print("[FAQ] 開始取得FAQ問題項目")
     }
     // [FAQ] 取得用戶token
     private func postFAQSendUserID() {
         let data: [String: Any] = ["user_id": userID]
-//        socket.emit("/faq/status", data)
-//        appSocketManagerDelegate?.socketEmit(command: "/faq/status", data: data)
+        //        socket.emit("/faq/status", data)
+        //        appSocketManagerDelegate?.socketEmit(command: "/faq/status", data: data)
         socketManager.socketEmit(command: "/faq/status", data: data)
         print("[FAQ] 取得用戶token！")
     }
-        
+    
     // [FAQ]
     private func handleAction(for value: String, prompt: String) {
         switch value {
-            case "members_setting":
-                print("會員問題: \(value) -> \(prompt)")
-                // 添加會員相關的處理邏輯
-            case "device_setting":
-                print("設備相關: \(value) -> \(prompt)")
-                // 添加設備相關的處理邏輯
-            case "monthly_report":
-                print("月報相關: \(value) -> \(prompt)")
-                // 添加月報相關的處理邏輯
-            default:
-                break
+        case "members_setting":
+            print("會員問題: \(value) -> \(prompt)")
+            // 添加會員相關的處理邏輯
+        case "device_setting":
+            print("設備相關: \(value) -> \(prompt)")
+            // 添加設備相關的處理邏輯
+        case "monthly_report":
+            print("月報相關: \(value) -> \(prompt)")
+            // 添加月報相關的處理邏輯
+        default:
+            break
         }
         self.messageText = prompt
         self.sendMessage()
@@ -512,12 +512,12 @@ struct ChatView: View, ChatWindowDelegate {
     // [異常偵測] 取得用戶token
     func postAbnormalSendUserID() {
         let data: [String: Any] = ["user_id": userID]
-//        socket.emit("/abnormal/status", data)
-//        appSocketManagerDelegate?.socketEmit(command: "/abnormal/status", data: data)
+        //        socket.emit("/abnormal/status", data)
+        //        appSocketManagerDelegate?.socketEmit(command: "/abnormal/status", data: data)
         socketManager.socketEmit(command: "/abnormal/status", data: data)
-//        print(data)
+        //        print(data)
     }
-
+    
     // -----------> [其他] <-----------
     // 獲取當前聊天內容最後一句話是否存在 [查詢中]
     private func checkForLoading(messages: String) {
@@ -532,7 +532,7 @@ struct ChatView: View, ChatWindowDelegate {
     public func disconnect(hasUserDisconnect: Bool) -> Bool
     {
         print("[用戶斷開連線] iOS client disconnected from the server")
-  
+        
         // MARK: 如果標誌變數為 true，則不再添加新的錯誤訊息
         //if hasUserDisconnect { return }
         if hasUserDisconnect { return true }
@@ -591,7 +591,7 @@ struct ChatView: View, ChatWindowDelegate {
     {
         print("[接收][取得 User information] listening -> '/power_inquiry/status_response'")
         //print("[接收][取得 User information] \(data)")
-                    
+        
         guard let firstData = data.first else {
             print("沒有收到數據")
             return
@@ -667,7 +667,7 @@ struct ChatView: View, ChatWindowDelegate {
     {
         print("[接收][取得歷史資料] listening -> '/history_message_response'")
         //print("[接收][取得歷史資料] \(data)")
-
+        
         self.SEARCH_INFO = [] // 用電查詢 記錄
         self.FAQ_INFO = [] // FAQ 記錄
         self.WARNING_INFO = [] // 聊天 記錄
@@ -773,7 +773,7 @@ struct ChatView: View, ChatWindowDelegate {
     {
         print("[FAQ][取得 User information] listening -> '/faq/status_response'")
         //print("[FAQ][取得 User information] \(data)")
-
+        
         guard let firstData = data.first else {
             print("[FAQ] 沒有收到數據")
             return
@@ -854,24 +854,24 @@ struct ChatView: View, ChatWindowDelegate {
         }
         if let status = firstData["status"] as? String {
             if status == "ok" {
-//                if let inquiryID = firstData["inquiry_id"] as? String, !inquiryID.isEmpty {
-//                    print("[異常偵測] 取得用戶token！")
-//                    print("[異常偵測] 成功: inquiry_id 存在且有值: \(inquiryID)")
-//                    self.inquiryID = inquiryID
-//                    self.postHistoryMessage() // [第二步] 進入聊天視窗取得用戶歷史資料
-//                    self.ActiveBtnName = "WARNING"
-//                    self.isWarningAbnormal = true // 顯示 異常推播 按鈕                    
-//                    socketManager.robotExceptionIcon = true //  開啟異常推播Icon
-//                    return
-//                } else {
-//                    // 一切正常 無異常，可取正常token
-//                    print("[異常偵測] 成功: 但是 inquiryID 不存在或為空（無異常）")
-//                    self.ActiveBtnName = "SEARCH"
-//                    self.isWarningAbnormal = false // 隱藏 異常推播 按鈕
-//                    socketManager.robotExceptionIcon = false //  關閉異常推播Icon
-//                    self.postSendUserID() // 默認: 用電查詢 token
-//                    
-//                }
+                //                if let inquiryID = firstData["inquiry_id"] as? String, !inquiryID.isEmpty {
+                //                    print("[異常偵測] 取得用戶token！")
+                //                    print("[異常偵測] 成功: inquiry_id 存在且有值: \(inquiryID)")
+                //                    self.inquiryID = inquiryID
+                //                    self.postHistoryMessage() // [第二步] 進入聊天視窗取得用戶歷史資料
+                //                    self.ActiveBtnName = "WARNING"
+                //                    self.isWarningAbnormal = true // 顯示 異常推播 按鈕
+                //                    socketManager.robotExceptionIcon = true //  開啟異常推播Icon
+                //                    return
+                //                } else {
+                //                    // 一切正常 無異常，可取正常token
+                //                    print("[異常偵測] 成功: 但是 inquiryID 不存在或為空（無異常）")
+                //                    self.ActiveBtnName = "SEARCH"
+                //                    self.isWarningAbnormal = false // 隱藏 異常推播 按鈕
+                //                    socketManager.robotExceptionIcon = false //  關閉異常推播Icon
+                //                    self.postSendUserID() // 默認: 用電查詢 token
+                //
+                //                }
                 
                 if let inquiryID = firstData["inquiry_id"] as? String, !inquiryID.isEmpty {
                     //print("[異常偵測] 取得用戶token！")
@@ -1020,7 +1020,7 @@ struct ChatView: View, ChatWindowDelegate {
             
         }
     }
-
+    
     // 獲取當前時間的函數 yyyy-MM-dd HH:mm:ss
     private func getCurrentFullTime(timeZone: TimeZone? = TimeZone(identifier: "Asia/Taipei")) -> String {
         let dateFormatter = DateFormatter()
@@ -1028,7 +1028,7 @@ struct ChatView: View, ChatWindowDelegate {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // 設定日期格式
         return dateFormatter.string(from: Date())
     }
-
+    
     // 獲取當前時間的函數 yyyy-MM-dd
     private func getCurrentDate(timeZone: TimeZone? = TimeZone(identifier: "Asia/Taipei")) -> String {
         let dateFormatter = DateFormatter()
@@ -1036,7 +1036,7 @@ struct ChatView: View, ChatWindowDelegate {
         dateFormatter.dateFormat = "yyyy-MM-dd" // 設定日期格式
         return dateFormatter.string(from: Date())
     }
-
+    
     // 獲取當前時間的函數 HH:mm
     private func getCurrentTime(timeZone: TimeZone? = TimeZone(identifier: "Asia/Taipei")) -> String {
         let dateFormatter = DateFormatter()
@@ -1044,7 +1044,7 @@ struct ChatView: View, ChatWindowDelegate {
         dateFormatter.dateFormat = "HH:mm" // 設定日期格式
         return dateFormatter.string(from: Date())
     }
-
+    
     // 將日期時間字串轉換為指定格式的時間字串
     // ex: 2024-08-01 17:25:05  轉成 17:25
     private func convertDateToTimeString(dateString: String) -> String? {
@@ -1086,22 +1086,67 @@ struct ChatView: View, ChatWindowDelegate {
     }
 }
 
-//struct ChatWindow: View {
-////    @State private var isChatViewPresented = false // 子頁面控制器（默認：關閉）
-//    
-//    var body: some View {
-//        VStack {
-//            // 點擊這個圖標來開啟 ChatView
-////            Button(action: {
-////                isChatViewPresented = true
-////            }) {
-////                Image(systemName: "message.circle.fill")
-////                    .resizable()
-////                    .frame(width: 50, height: 50)
-////            }
-////            .sheet(isPresented: $isChatViewPresented) {
-////                ChatView()
-////            }
-//        }
-//    }
-//}
+struct ChatWindow: View {
+    @ObservedObject var socketManager : AppSocketManager
+    @State private var isChatViewPresented = false // 子頁面控制器（默認：關閉）
+    
+    @State private var showWelcomeBubble = true
+    @State private var bubbleOffset: CGSize = .zero
+    @State private var bubbleOpacity: Double = 1
+    
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            // MARK: - 歡迎提示
+            if showWelcomeBubble {
+                Text("歡迎回來！\n q0988220903@gmail.com")
+                    .font(.caption)
+                    .padding(10)
+                    .background(Color.yellow)
+                    .cornerRadius(10)
+                    .opacity(bubbleOpacity)
+                    .offset(bubbleOffset)
+                    .onAppear {
+                        // 進場動畫 - 從右下到左上（1/4 圓）
+                        withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
+                            bubbleOffset = CGSize(width: -40, height: -10)
+                            bubbleOpacity = 1
+                        }
+                        // 5秒後執行退場動畫
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
+                                bubbleOffset = .zero
+                                bubbleOpacity = 0
+                            }
+                            // 確保完全消失後取消顯示
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                                showWelcomeBubble = false
+                            }
+                        }
+                    }
+            }
+            
+            
+            // MARK: - 機器人按鈕 + AI machine icon
+            Button(action: {
+                isChatViewPresented = true
+                showWelcomeBubble = true
+            }) {
+                Image(socketManager.robotExceptionIcon ? "chat-bot-Warning" : "chat-bot")
+                    .foregroundColor(.white)
+                    .padding()
+            }
+            // v 2.4.0 暫時關閉 - 20250609
+            //            .sheet(isPresented: $isChatViewPresented) {
+            //                ChatView(socketManager: socketManager)
+            //            }
+            .padding(.trailing, 0) // 右邊距離
+            .padding(.bottom, 33) // 底部距離
+            // v 2.4.0 暫時關閉 - 20250609
+            //            .disabled(socketManager.socketReady)
+            
+            
+        }
+        
+    }
+}
+

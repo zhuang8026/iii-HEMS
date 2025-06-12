@@ -111,11 +111,14 @@ struct ElectricityManageView: View {
             
             //讀取狀態轉圈圈
             if(!self.isLoaded){
-    
-                Color.init(hex: "#f3f3f3", alpha: 0.4).edgesIgnoringSafeArea(.all)
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color.init(hex: "#6a717d")))
-                    .scaleEffect(2)
+                Color.light_green.opacity(0.85) // 透明磨砂黑背景
+                    .edgesIgnoringSafeArea(.all) // 覆蓋整個畫面
+                Loading(text: "資料載入中...",color: Color.g_blue)
+
+//                Color.init(hex: "#f3f3f3", alpha: 0.4).edgesIgnoringSafeArea(.all)
+//                ProgressView()
+//                    .progressViewStyle(CircularProgressViewStyle(tint: Color.init(hex: "#6a717d")))
+//                    .scaleEffect(2)
             }
         }
         .onChange(of: self.electricity_msgManager.showAlert){value in

@@ -21,7 +21,7 @@ struct ContentView: View {
     @State private var showAIOTFullScreen = false // 智慧控制全螢幕控制（默認：關閉）
     
     @StateObject private var mqttManager = MQTTManagerMiddle.shared
-
+    
     @EnvironmentObject var electricityElectricityTrackingAlertManager : ElectricityTrackingAlertManager
     @EnvironmentObject var electricityModifyElectricityTargetAlertManager : ModifyElectricityTargetAlertManager
     
@@ -47,6 +47,7 @@ struct ContentView: View {
                 LoginView(loginflag: self.$loginflag)
             }
             else{
+                // MARK: - menubar & main page
                 Group{
                     TabView(selection: $selectedTab) {
                         // MARK: - 日常用電追蹤
@@ -90,13 +91,13 @@ struct ContentView: View {
                                     }
                                 }
                             }
-
-//                        AIOTView(robotIconDisplay: self.$robotIconDisplay)
-//                            .foregroundColor(.g_blue) // 全局文字顏色為藍色
-//                            .tabItem {
-//                                Image(systemName: "bolt.horizontal.icloud.fill")
-//                                Text("智慧控制")
-//                            }
+                        
+                        //                        AIOTView(robotIconDisplay: self.$robotIconDisplay)
+                        //                            .foregroundColor(.g_blue) // 全局文字顏色為藍色
+                        //                            .tabItem {
+                        //                                Image(systemName: "bolt.horizontal.icloud.fill")
+                        //                                Text("智慧控制")
+                        //                            }
                         // MARK: - 帳戶服務
                         CustomerServiceView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay)
                             .font(.system(size: 30, weight: .bold, design: .rounded))
@@ -106,6 +107,7 @@ struct ContentView: View {
                             }
                             .tag(4)
                     }
+                    .accentColor(Color.g_green) // menu bar 被選中
                     .fullScreenCover(isPresented: $showAIOTFullScreen) {
                         AIOTView(robotIconDisplay: self.$robotIconDisplay, showAIOTFullScreen: self.$showAIOTFullScreen) // 🔥 這是全螢幕的 AIOT 畫面
                             .foregroundColor(.g_blue) // 全局文字顏色為藍色
@@ -116,7 +118,7 @@ struct ContentView: View {
                                 }
                             }
                     }
-
+                    
                     // MARK: - AI機器人
                     if (robotIconDisplay) {
                         // MARK: 在右下角添加一個固定的黃色按鈕
@@ -124,19 +126,34 @@ struct ContentView: View {
                             Spacer()
                             HStack {
                                 Spacer()
-                                Button(action: {
-                                    isChatViewPresented = true
-                                }) {
-                                    Image(socketManager.robotExceptionIcon ? "chat-bot-Warning" : "chat-bot")
-                                        .foregroundColor(.white)
-                                        .padding()
-                                }
-                                .sheet(isPresented: $isChatViewPresented) {
-                                    ChatView(socketManager: socketManager)
-                                }
-                                .padding(.trailing, 0) // 右邊距離
-                                .padding(.bottom, 33) // 底部距離
-                                .disabled(socketManager.socketReady)
+                                ChatWindow(socketManager: socketManager)
+//                                ZStack(alignment: .topLeading) {
+//                                    // MARK: - 歡迎提示
+//                                    if !isChatViewPresented {
+//                                        Text("歡迎回來！")
+//                                            .font(.caption)
+//                                            .padding(8)
+//                                            .background(Color.yellow)
+//                                            .cornerRadius(10)
+//                                            .offset(x: -10, y: -10) // 控制氣泡位置
+//                                            .transition(.opacity.combined(with: .move(edge: .bottom)))
+//                                            .animation(.easeInOut(duration: 0.3), value: isChatViewPresented)
+//                                    }
+//                                    Button(action: {
+//                                        isChatViewPresented = true
+//                                    }) {
+//                                        Image(socketManager.robotExceptionIcon ? "chat-bot-Warning" : "chat-bot")
+//                                            .foregroundColor(.white)
+//                                            .padding()
+//                                    }
+//                                    .sheet(isPresented: $isChatViewPresented) {
+//                                        ChatView(socketManager: socketManager)
+//                                    }
+//                                    .padding(.trailing, 0) // 右邊距離
+//                                    .padding(.bottom, 33) // 底部距離
+//                                    .disabled(socketManager.socketReady)
+//                                }
+                               
                             }
                         }.ignoresSafeArea(.keyboard, edges: .bottom) // 禁用自動避開鍵盤
                     }

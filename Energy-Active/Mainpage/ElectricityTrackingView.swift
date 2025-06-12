@@ -90,24 +90,17 @@ struct ElectricityTrackingView: View {
                                 .overlay(
                                     HStack {
                                         Spacer()
-                                        
                                         ZStack{
-                                            
                                             Circle()
                                                 .foregroundColor(Color(red: 242.0 / 255.0, green: 243.0 / 255.0, blue: 251.0 / 255.0))
-                                            
                                             Button {
-                                                //print("按下設定目標")
-                                                
                                                 print("按下設定目標")
                                                 electricityModifyElectricityTargetAlertManager.showAlert = true
-                                                
                                             } label: {
                                                 Image("pencil")
                                                     .resizable()//.scaledToFit()
                                                     .frame(width: 30.0, height: 30.0)
                                                     .foregroundColor(.clear)
-                                                
                                             }
                                         }.frame(width: 50.0, height: 50.0)
                                             .padding(.trailing, 20)
@@ -115,15 +108,17 @@ struct ElectricityTrackingView: View {
                                 )
                                 .padding(.horizontal, 25)
                             
-                            Text("．不含社區公共電費．").font(.custom("NotoSansTC-Medium", size: 20))
+                            Text("．不含社區公共電費．")
+                                .font(.custom("NotoSansTC-Medium", size: 18))
                                 .foregroundColor(Color(red: 251.0 / 255.0, green: 251.0 / 255.0, blue: 1.0))
-                                .padding(.top, 25)
-                                .padding(.bottom, 32)
+                                .padding(.top, 12)
+                                .padding(.bottom, 12)
                             
                             Spacer()
-                        }.padding(.top, 28)
+                        }.padding(.top, 12)
                         
-                    }.frame(height: 250.0)
+                    }
+//                        .frame(height: 250.0)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
                         .background(Color(red: 93.0 / 255.0, green: 194.0 / 255.0, blue: 184.0 / 255.0))
                         .cornerRadius(10)
@@ -232,11 +227,14 @@ struct ElectricityTrackingView: View {
             }
             
             if(!self.isLoaded){
-                
-                Color.init(hex: "#f3f3f3", alpha: 0.4)
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: Color.init(hex: "#6a717d")))
-                    .scaleEffect(2)
+                Color.light_green.opacity(0.85) // 透明磨砂黑背景
+                    .edgesIgnoringSafeArea(.all) // 覆蓋整個畫面
+                Loading(text: "資料載入中...",color: Color.g_blue)
+
+//                Color.init(hex: "#f3f3f3", alpha: 0.4)
+//                ProgressView()
+//                    .progressViewStyle(CircularProgressViewStyle(tint: Color.init(hex: "#6a717d")))
+//                    .scaleEffect(2)
             }
             
             // MARK: - 警告視窗

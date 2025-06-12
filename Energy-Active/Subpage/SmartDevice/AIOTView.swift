@@ -322,7 +322,7 @@ struct AIOTView: View {
                             
                             // ❌ 無資料 → 顯示 Loading 畫面
                             if (mqttManager.serverLoading) {
-                                Color.light_green.opacity(0.85) // 透明磨砂黑背景
+                                Color.light_green.opacity(0.95) // 透明磨砂黑背景
                                     .edgesIgnoringSafeArea(.all) // 覆蓋整個畫面
                                 Loading(text: "環控確認中...",color: Color.g_blue)
                             }
