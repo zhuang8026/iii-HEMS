@@ -1090,46 +1090,46 @@ struct ChatWindow: View {
     @ObservedObject var socketManager : AppSocketManager
     @State private var isChatViewPresented = false // 子頁面控制器（默認：關閉）
     
-    @State private var showWelcomeBubble = true
+//    @State private var showWelcomeBubble = true
     @State private var bubbleOffset: CGSize = .zero
     @State private var bubbleOpacity: Double = 1
     
     var body: some View {
         ZStack(alignment: .topLeading) {
             // MARK: - 歡迎提示
-            if showWelcomeBubble {
-                Text("歡迎回來！\n q0988220903@gmail.com")
-                    .font(.caption)
-                    .padding(10)
-                    .background(Color.yellow)
-                    .cornerRadius(10)
-                    .opacity(bubbleOpacity)
-                    .offset(bubbleOffset)
-                    .onAppear {
-                        // 進場動畫 - 從右下到左上（1/4 圓）
-                        withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
-                            bubbleOffset = CGSize(width: -40, height: -10)
-                            bubbleOpacity = 1
-                        }
-                        // 5秒後執行退場動畫
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                            withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
-                                bubbleOffset = .zero
-                                bubbleOpacity = 0
-                            }
-                            // 確保完全消失後取消顯示
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                                showWelcomeBubble = false
-                            }
-                        }
-                    }
-            }
+//            if showWelcomeBubble {
+//                Text("歡迎回來！\n q0988220903@gmail.com")
+//                    .font(.caption)
+//                    .padding(10)
+//                    .background(Color.yellow)
+//                    .cornerRadius(10)
+//                    .opacity(bubbleOpacity)
+//                    .offset(bubbleOffset)
+//                    .onAppear {
+//                        // 進場動畫 - 從右下到左上（1/4 圓）
+//                        withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
+//                            bubbleOffset = CGSize(width: -40, height: -10)
+//                            bubbleOpacity = 1
+//                        }
+//                        // 5秒後執行退場動畫
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+//                            withAnimation(.interpolatingSpring(stiffness: 200, damping: 15)) {
+//                                bubbleOffset = .zero
+//                                bubbleOpacity = 0
+//                            }
+//                            // 確保完全消失後取消顯示
+//                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+//                                showWelcomeBubble = false
+//                            }
+//                        }
+//                    }
+//            }
             
             
             // MARK: - 機器人按鈕 + AI machine icon
             Button(action: {
                 isChatViewPresented = true
-                showWelcomeBubble = true
+//                showWelcomeBubble = true
             }) {
                 Image(socketManager.robotExceptionIcon ? "chat-bot-Warning" : "chat-bot")
                     .foregroundColor(.white)

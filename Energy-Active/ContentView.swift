@@ -177,11 +177,11 @@ struct ContentView: View {
                     performance: "",
                     weekly_advice: ""
                 )
-                // MARK: - 每日登入提示視窗
-                .electricityContinuousLoginAlertView(
-                    showAlert: $electricityElectricityTrackingAlertManager.showContinuousLoginAlert,
-                    loginday: 0
-                )
+                // MARK: - 每日登入提示視窗 (累計簽到任務) 20250624 - 書安要求 關閉此功能
+//                .electricityContinuousLoginAlertView(
+//                    showAlert: $electricityElectricityTrackingAlertManager.showContinuousLoginAlert,
+//                    loginday: 0
+//                )
                 .environmentGraphicsAlertView(
                     loginflag: self.$loginflag,
                     showAlert: $electricityGraphicsAlertManager.showAlert
