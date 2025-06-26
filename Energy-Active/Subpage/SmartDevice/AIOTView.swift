@@ -10,8 +10,8 @@ import SwiftUI
 struct AIOTView: View {
     @EnvironmentObject var appStore: AppStore  // 使用全域狀態
     @ObservedObject var mqttManager = MQTTManagerMiddle.shared
-    
-    //    @Binding var loginflag:Bool
+
+    @Binding var loginflag:Bool // true -> token已過期
     @Binding var robotIconDisplay:Bool // 機器人顯示控制
     @Binding var showAIOTFullScreen:Bool // 智慧控制全螢幕控制（默認：關閉）
     
@@ -370,7 +370,12 @@ struct AIOTView: View {
                     isDFConnected = availables.contains("dehumidifier")
                     isREMCConnected = availables.contains("remote")
                 }
-                
+                .onReceive(mqttManager.$responseCode) { responseCode in
+                    print("錯誤代碼:\(responseCode ?? 000)")
+                    if(responseCode == 4002) {
+                        self.loginflag = true
+                    }
+                }
                 // [全局][自訂彈窗] 提供空調 與 遙控器 頁面使用
                 if mqttManager.decisionControl {
                     CustomPopupView(

@@ -98,10 +98,17 @@ extension environmentCreateReviseScheduleAlert {
                                     )
                                     .overlay {
                                         DatePicker("請選擇時間點", selection: $currentTime, displayedComponents: .hourAndMinute)
+                                            .datePickerStyle(.compact) // 扁平風格，像一行文字
                                             .labelsHidden()
-                                            .contentShape(Rectangle())
-                                            .opacity(0.011)             // <<< here
-                                            .datePickerStyle(DefaultDatePickerStyle())
+                                            .frame(height: 52.0)
+                                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
+                                            .background(Color.white)
+                                            .cornerRadius(5.0)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 5.0)
+                                                    .inset(by: 0.5)
+                                                    .stroke(Color(white: 204.0 / 255.0), lineWidth: 1.0)
+                                            )
                                     }
                                     
                                 }

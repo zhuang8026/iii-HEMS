@@ -59,6 +59,7 @@ struct EnvironmentalCardView: View {
                 Image("co2") // CO₂ 圖示 (可換成自定義圖片)
                     .resizable()
                     .scaledToFit()
+                    .frame(maxWidth: 50)
 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("二氧化碳")
@@ -72,16 +73,17 @@ struct EnvironmentalCardView: View {
                 }
             }
                 .padding()
-                .frame(width: UIScreen.main.bounds.width * 0.5, height: 100)
+                .frame(width: UIScreen.main.bounds.width * 0.44, height: 100)
                 .background(Color.white)
                 .cornerRadius(12)
                 .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
 
             // 第二個卡片 (溫度)
             HStack(alignment: .center, spacing: 8) {
-                Image("normal-temperature") // CO₂ 圖示 (可換成自定義圖片)
+                Image("normal-temperature") // 溫度 圖示 (可換成自定義圖片)
                         .resizable()
                         .scaledToFit()
+                        .frame(maxWidth: 50)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text("溫度")
@@ -98,7 +100,7 @@ struct EnvironmentalCardView: View {
                 }
             }
                 .padding()
-                .frame(width: UIScreen.main.bounds.width * 0.40, height: 100)
+                .frame(width: UIScreen.main.bounds.width * 0.45, height: 100)
                 .background(Color.g_green) // health: g_green, cold: g_blue, warning: warning
             
                 .cornerRadius(12)

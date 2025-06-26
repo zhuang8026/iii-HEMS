@@ -109,7 +109,7 @@ struct ContentView: View {
                     }
                     .accentColor(Color.g_green) // menu bar 被選中
                     .fullScreenCover(isPresented: $showAIOTFullScreen) {
-                        AIOTView(robotIconDisplay: self.$robotIconDisplay, showAIOTFullScreen: self.$showAIOTFullScreen) // 🔥 這是全螢幕的 AIOT 畫面
+                        AIOTView(loginflag: self.$loginflag, robotIconDisplay: self.$robotIconDisplay, showAIOTFullScreen: self.$showAIOTFullScreen) // 🔥 這是全螢幕的 AIOT 畫面
                             .foregroundColor(.g_blue) // 全局文字顏色為藍色
                             .onDisappear {
                                 // 🔥 確保 UI 正確更新，避免畫面變白

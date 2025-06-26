@@ -30,7 +30,8 @@ final class MQTTManagerMiddle: NSObject, ObservableObject {
     @Published var serverLoading: Bool = true
     // MARK: - 家電總資料
     @Published var appliances: [String: [String: electricData]] = [:] // 安裝的家電參數狀態
-    
+    // MARK: - 家電總資料
+    @Published var responseCode: Int? // 判斷API回傳code
     
     private let appID = "1d51e92d-e623-41dd-b367-d955a0d44d66"
     
@@ -306,7 +307,7 @@ extension MQTTManagerMiddle: CocoaMQTTDelegate {
                     do {
                         if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                             
-//                            print("✅ 總家電參數更新: \(json)")
+                            print("✅ 總家電參數更新: \(json)")
                             //  print("✅ 總家電參數: \(json.isEmpty ? "無資料": "有資料")")
                             
                             self.serverLoading = json.isEmpty // 資料為空
@@ -315,11 +316,14 @@ extension MQTTManagerMiddle: CocoaMQTTDelegate {
                             if let errorMessage = json["error"] as? String {
                                 self.serverLoading = false
                                 print("❗發生錯誤：\(errorMessage)")
+                                if let code = json["code"] as? Int {
+                                    self.responseCode = code
+                                }
                                 AlertHelper.showAlert(title: "錯誤通知", message: "\(errorMessage)")
                             } else {
                                 // ✅ 無錯誤，正常更新
                                 self.serverLoading = json.isEmpty
-                                //                                print("MQTT 是否已取得資料: \(self.serverLoading)")
+                                // print("MQTT 是否已取得資料: \(self.serverLoading)")
                             }
                             
                             // 已綁定家電 確認
@@ -367,10 +371,10 @@ extension MQTTManagerMiddle: CocoaMQTTDelegate {
                                 
                                 self.appliances = parsed
                                 
-                                if let mqtt_sensor = self.appliances["sensor"] { print("✅ 「sensor」溫濕度數據: \(mqtt_sensor)") }
-                                if let mqtt_ac = self.appliances["air_conditioner"] { print("✅ 「air_conditioner」冷氣數據: \(mqtt_ac)") }
-                                if let mqtt_dhdf = self.appliances["dehumidifier"] { print("✅ 「dehumidifier」除濕機數據: \(mqtt_dhdf)") }
-                                if let mqtt_remote = self.appliances["remote"] { print("✅ 「remote」遙控器數據: \(mqtt_remote)") }
+//                                if let mqtt_sensor = self.appliances["sensor"] { print("✅ 「sensor」溫濕度數據: \(mqtt_sensor)") }
+//                                if let mqtt_ac = self.appliances["air_conditioner"] { print("✅ 「air_conditioner」冷氣數據: \(mqtt_ac)") }
+//                                if let mqtt_dhdf = self.appliances["dehumidifier"] { print("✅ 「dehumidifier」除濕機數據: \(mqtt_dhdf)") }
+//                                if let mqtt_remote = self.appliances["remote"] { print("✅ 「remote」遙控器數據: \(mqtt_remote)") }
                             }
                         }
                     } catch {
