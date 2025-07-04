@@ -86,6 +86,7 @@ extension environmentCreateReviseScheduleAlert {
                                             Text("\(formattedDate(currentTime))")
                                                 .font(.custom("NotoSansTC-Medium", size: 20))
                                                 .foregroundColor(Color(white: 160.0 / 255.0))
+                                                .opacity(0)
                                         }
                                         
                                     }
